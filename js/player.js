@@ -1,12 +1,16 @@
-function Player(gravity) {
+function Player(gravity, x, y, hp) {
   this.gravity = gravity;
 
   this.x = x;
   this.y = y;
-  this.xVelocity = xVelocity;
-  this.yVelocity = yVelocity;
+  this.xVelocity = 0;
+  this.yVelocity = 0;
 
   this.hp = hp;
 
-  this.timesJumped = timesJumped;
+  this.timesJumped = 0;
+
+  this.jump = function() {
+    // TODO
+  }
 }
