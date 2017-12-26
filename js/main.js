@@ -1,12 +1,24 @@
-// Called every frame
-function mainGameFunction() {
-  update();
-  render();
-}
-
 // Game looper.
 window.onload = function () { // Run only when page has loaded.
   // Code by Arthur Schreiber "Javascript Game Development - The Game Loop" - http://nokarma.org/2011/02/02/javascript-game-development-the-game-loop/index.html
+  Game.run = (function() {
+    var loops = 0, skipTicks = 1000 / Game.fps,
+        maxFrameSkip = 10,
+        nextGameTick = (new Date).getTime();
+
+    return function() {
+      loops = 0;
+
+      while ((new Date).getTime() > nextGameTick) {
+        Game.update();
+        nextGameTick += skipTicks;
+        loops++;
+      }
+
+      Game.render();
+    };
+  })();
+
   (function() {
     var onEachFrame;
     if (window.webkitRequestAnimationFrame) {
@@ -21,13 +33,13 @@ window.onload = function () { // Run only when page has loaded.
       };
     } else {
       onEachFrame = function(cb) {
-        setInterval(cb, 1000 / 30);
+        setInterval(cb, 1000 / 60);
       }
     }
 
     window.onEachFrame = onEachFrame;
   })();
 
-  window.onEachFrame(mainGameFunction());
+  window.onEachFrame(Game.run);
   // Code end.
 }
