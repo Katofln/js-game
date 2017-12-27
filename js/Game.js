@@ -1,0 +1,4 @@
+
+
+// New game.
+game Game();
