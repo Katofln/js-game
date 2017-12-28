@@ -1,4 +1,3 @@
-
-
-// New game.
-game Game();
+var Game = {
+    fps:30
+};
