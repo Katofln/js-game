@@ -1,3 +1,4 @@
+// Player object constructor.
 function Player(gravity, x, y, hp) {
   this.gravity = gravity;
 
