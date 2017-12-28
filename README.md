@@ -1,4 +1,4 @@
-# js-game
+# JS Ninja
 Ninja game written in javascript.
 
 The game is a two-player side-scroller ninja battle game.
