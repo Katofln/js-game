@@ -15,3 +15,7 @@ function Player(gravity, x, y, hp) {
     // TODO
   }
 }
+
+// Declare the two players.
+var player1 = null;
+var player2 = null;
