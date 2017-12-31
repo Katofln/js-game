@@ -10,9 +10,21 @@ function Player(gravity, x, y, hp) {
   this.hp = hp;
 
   this.timesJumped = 0;
+  this.jumpKeyHaveBeenReleasedInAir = false; // While jumping check if jump key have been released while in air, this is for double jump to work properly.
 
-  this.jump = function() {
+  // Jump function.
+  this.jump = function () {
     console.log("Player jumped.");
+  }
+
+  // Move left.
+  this.moveLeft = function () {
+
+  }
+
+  // Move right.
+  this.moveRight = function () {
+
   }
 }
 
