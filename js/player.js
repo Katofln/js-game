@@ -12,7 +12,7 @@ function Player(gravity, x, y, hp) {
   this.timesJumped = 0;
 
   this.jump = function() {
-    // TODO
+    console.log("Player jumped.");
   }
 }
 

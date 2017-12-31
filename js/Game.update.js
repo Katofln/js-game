@@ -1,3 +1,3 @@
 Game.update = function () {
-  console.log("Update called.")
+  //console.log("Update called.")
 }

@@ -1,3 +1,3 @@
 Game.render = function () {
-  console.log("Render called.")
+  //console.log("Render called.")
 }
