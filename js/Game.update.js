@@ -1,3 +1,4 @@
 Game.update = function () {
-  //console.log("Update called.")
+  // Check keys.
+  Game.keyCheck();
 }
