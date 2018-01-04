@@ -9,3 +9,7 @@ This page links and credits all game art, music and so on other creaters have ma
 *By Ari Feldman*
 
 [Webpage link.](https://www.widgetworx.com/spritelib/)
+### Game-icons.net
+*By Lorc, Delapouite & contributors*
+
+[Webpage link.](http://game-icons.net/)
