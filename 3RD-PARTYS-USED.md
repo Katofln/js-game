@@ -4,4 +4,8 @@ This page links and credits all game art, music and so on other creaters have ma
 ### Ninja [Animated]
 *By DezrasDragons*
 
-[OpenGameArt.org link.](https://opengameart.org/content/ninja-animated)
+[Webpage link.](https://opengameart.org/content/ninja-animated)
+### SpriteLib
+*By Ari Feldman*
+
+[Webpage link.](https://www.widgetworx.com/spritelib/)
