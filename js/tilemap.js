@@ -1,4 +1,10 @@
-var tilemap = [
+var tilemap = {
+    tileWidth:32,
+    rows = 20,
+    columns = 15
+};
+
+var tilemap.map = [
 
 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,

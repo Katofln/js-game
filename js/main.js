@@ -2,8 +2,6 @@
 width = 640;
 height = 480;
 
-// Tilewidth (px)
-var tileWidth = 32
 
 function getNewFallVelocity (gravity, yVelocity) {
   return gravity + yVelocity;
