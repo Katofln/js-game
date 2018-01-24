@@ -13,8 +13,13 @@ function getNewFallVelocity (gravity, yVelocity) {
   return gravity + yVelocity;
 }
 
-function objectCollidingWithTilemap (x, y) {
-
+// Return if an object is colliding with the tilemap.
+function objectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight) {
+  // TODO: Might be able to optimize this.
+  // Loop though each tile to check if an object is coliding with the tilemap.
+  for (var i = 0; i < tilemap.map.length; i++) {
+    
+  }
 }
 
 // Get canvas context.
