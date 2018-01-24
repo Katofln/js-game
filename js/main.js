@@ -19,8 +19,29 @@ function objectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight
   // Loop though each tile to check if an object is coliding with the tilemap.
   var currentRow = 1;
   var currentCol = 1;
+  var currentTileX = 0;
+  var currentTileY = 0;
   for (var i = 0; i < tilemap.map.length; i++) {
-
+    if (objectX < currentTileX + tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+         objectX + objectWidth > currentTileX &&
+         objectY < currentTileY + tilemap.tileSize &&
+         objectHeight + objectY > currentTileY
+       ) {
+         // Check if tile is not air.
+         if (tilemap.map[i] > 0) {
+           return true;
+         }
+    } else {
+      if (currentCol != tilemap.columns) {
+        currentCol++;
+        currentTileX += tilemap.tileSize;
+      } else {
+        currentCol = 1;
+        currentTileX = 0;
+        currentTileY += tilemap.tileSize;
+        currentRow++;
+      }
+    }
   }
   return false; // If not coliding, retun false.
 }
