@@ -17,9 +17,12 @@ function getNewFallVelocity (gravity, yVelocity) {
 function objectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight) {
   // TODO: Might be able to optimize this.
   // Loop though each tile to check if an object is coliding with the tilemap.
+  var currentRow = 1;
+  var currentCol = 1;
   for (var i = 0; i < tilemap.map.length; i++) {
-    
+
   }
+  return false; // If not coliding, retun false.
 }
 
 // Get canvas context.
