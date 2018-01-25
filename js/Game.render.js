@@ -39,6 +39,7 @@ Game.render = function () {
 
   // Check if game is NOT running.
   if (!Game.running) {
-    
+    // Print that players need to ready up.
+    //canvasContext.fillText("Hold attack/block key to accept ready check.", 0, 0); 
   }
 }
