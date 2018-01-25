@@ -8,7 +8,7 @@ Game.render = function () {
   var currentTileX = 0;
   var currentTileY = 0;
   for (var i = 0; i < Tilemap.map.length; i++) {
-    if (Tilemap.map[i] == 1) {
+    if (Tilemap.map[i] > 0) {
       canvasContext.drawImage(groundTile, currentTileX, currentTileY);
     }
 
