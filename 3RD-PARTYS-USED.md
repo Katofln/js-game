@@ -13,3 +13,7 @@ This page links and credits all game art, music and so on other creaters have ma
 *By Lorc, Delapouite & contributors*
 
 [Webpage link.](http://game-icons.net/)
+### Large forest background
+*By Julien*
+
+[Webpage link.](https://opengameart.org/content/large-forest-background)
