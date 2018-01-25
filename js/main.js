@@ -49,3 +49,7 @@ function objectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight
 // Get canvas context.
 var canvas = document.getElementById("gameCanvas");
 var canvasContext = canvas.getContext("2d");
+
+// Add images.
+var groundTile = new Image();
+groundTile.src = 'assets/tiles/groundTile.png';
