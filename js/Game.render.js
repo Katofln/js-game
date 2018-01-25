@@ -1,7 +1,6 @@
 Game.render = function () {
   // Clear canvas.
-  canvasContext.fillStyle = "#ffffff";
-  canvasContext.fillRect(0, 0, Game.width, Game.height);
+  canvasContext.drawImage(forrestBackground, 0, 0);
 
   // Draw tilemap.
   var currentRow = 1;

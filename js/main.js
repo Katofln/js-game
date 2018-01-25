@@ -49,3 +49,6 @@ var canvasContext = canvas.getContext("2d");
 // Add images.
 var groundTile = new Image();
 groundTile.src = 'assets/tiles/groundTile.png';
+
+var forrestBackground = new Image();
+forrestBackground.src = 'assets/backgrounds/forrestBackground.png';
