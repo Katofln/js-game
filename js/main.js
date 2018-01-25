@@ -21,24 +21,24 @@ function objectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight
   var currentCol = 1;
   var currentTileX = 0;
   var currentTileY = 0;
-  for (var i = 0; i < tilemap.map.length; i++) {
-    if (objectX < currentTileX + tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+  for (var i = 0; i < Tilemap.map.length; i++) {
+    if (objectX < currentTileX + Tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
          objectX + objectWidth > currentTileX &&
-         objectY < currentTileY + tilemap.tileSize &&
+         objectY < currentTileY + Tilemap.tileSize &&
          objectHeight + objectY > currentTileY
        ) {
          // Check if tile is not air.
-         if (tilemap.map[i] > 0) {
+         if (Tilemap.map[i] > 0) {
            return true;
          }
     } else {
-      if (currentCol != tilemap.columns) {
+      if (currentCol != Tilemap.columns) {
         currentCol++;
-        currentTileX += tilemap.tileSize;
+        currentTileX += Tilemap.tileSize;
       } else {
         currentCol = 1;
         currentTileX = 0;
-        currentTileY += tilemap.tileSize;
+        currentTileY += Tilemap.tileSize;
         currentRow++;
       }
     }
