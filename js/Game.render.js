@@ -9,7 +9,19 @@ Game.render = function () {
   var currentTileY = 0;
   for (var i = 0; i < Tilemap.map.length; i++) {
     if (Tilemap.map[i] > 0) {
-      canvasContext.drawImage(groundTile, currentTileX, currentTileY);
+      switch (Tilemap.map[i]) {
+        case 1:
+          canvasContext.drawImage(groundTile, currentTileX, currentTileY);
+          break;
+        case 2:
+          canvasContext.drawImage(grassTile, currentTileX, currentTileY);
+          break;
+        case 3:
+          canvasContext.drawImage(grassTileLeftCorner, currentTileX, currentTileY);
+          break;
+        case 4:
+          canvasContext.drawImage(grassTileRightCorner, currentTileX, currentTileY);
+      }
     }
 
     if (currentCol != Tilemap.columns) {
