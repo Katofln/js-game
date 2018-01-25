@@ -34,4 +34,11 @@ Game.render = function () {
       currentRow++;
     }
   }
+
+
+
+  // Check if game is NOT running.
+  if (!Game.running) {
+    
+  }
 }
