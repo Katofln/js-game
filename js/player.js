@@ -8,6 +8,7 @@ function Player (gravity, x, y, hp) {
   this.yVelocity = 0;
 
   this.hp = hp;
+  this.wins = 0;  // Rounds player have won.
 
   this.timesJumped = 0;
   this.jumpKeyHaveBeenReleasedInAir = false; // While jumping check if jump key have been released while in air, this is for double jump to work properly.
