@@ -1,6 +1,6 @@
 Game.render = function () {
   // Clear canvas.
-  canvasContext.clearRect(0, 0, width, height);
+  canvasContext.clearRect(0, 0, Game.width, Game.height);
 
   // Draw tilemap.
   var currentRow = 1;

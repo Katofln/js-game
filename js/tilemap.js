@@ -1,7 +1,7 @@
 var Tilemap = { // Stores tilemap settings.
     tileSize:32,  // Width and height in pixels.
-    rows:20,
-    columns:15,
+    rows:15,
+    columns:20,
     map: [
 
 1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,

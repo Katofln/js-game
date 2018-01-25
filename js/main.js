@@ -5,10 +5,6 @@ function getGameVersion() {
   return gameVersion;
 }
 
-// Game size.
-width = 640;
-height = 480;
-
 function getNewFallVelocity (gravity, yVelocity) {
   return gravity + yVelocity;
 }

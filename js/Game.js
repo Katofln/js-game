@@ -1,3 +1,5 @@
 var Game = {
-    fps:30
+    fps:30,
+    width:640,
+    height:480
 };
