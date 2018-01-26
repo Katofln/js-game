@@ -3,5 +3,6 @@ var Game = {
     width:1024,
     height:768,
     running:false,
-    standardTextColor:"#282828"
+    winScreen:false,
+    standardTextColor:"#414141"
 };
