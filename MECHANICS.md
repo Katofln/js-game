@@ -13,8 +13,10 @@ Left:           A
 Right:          D
 Jump:           W
 Attack/Block:   C
+Shuriken:       V
 ### Player 2
 Left:           [Left Arrow Key]
 Right:          [Right Arrow Key]
 Jump:           [Up Arrow Key]
 Attack/Block:   .     (Dot Key)
+Shuriken:       ,     (Comma Key)
