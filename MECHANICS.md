@@ -9,14 +9,14 @@ The game uses a best-of-three playoff. The score counter is on the top, the blue
 Every time a new round has to be played. Both players have to hold down the attack/block button at the same time, and then the round will start after a countdown of 3 seconds. When a player hold down the attack/block button, an indicator and a sound will display on the screen at that players side.
 ## Controls
 ### Player 1
-* Left:           A
-* Right:          D
-* Jump:           W
-* Attack/Block:   C
-* Shuriken:       V
+* Left: A
+* Right: D
+* Jump: W
+* Attack/Block: C
+* Shuriken: V
 ### Player 2
-* Left:           [Left Arrow Key]
-* Right:          [Right Arrow Key]
-* Jump:           [Up Arrow Key]
-* Attack/Block:   .     (Dot Key)
-* Shuriken:       ,     (Comma Key)
+* Left: [Left Arrow Key]
+* Right: [Right Arrow Key]
+* Jump: [Up Arrow Key]
+* Attack/Block: . (Dot Key)
+* Shuriken: , (Comma Key)
