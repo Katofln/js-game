@@ -33,6 +33,11 @@ function Player (gravity, x, y, hp) {
   this.moveRight = function () {
 
   }
+
+  // Attack/block.
+  this.attackAndBlock = function () {
+    console.log("Player attacked/blocked");
+  }
 }
 
 // Declare the two players.
