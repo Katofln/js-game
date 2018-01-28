@@ -45,4 +45,36 @@ Game.render = function () {
     canvasContext.fillStyle = Game.standardTextColor;
     canvasContext.fillText("Hold attack/block key to accept ready check.", Game.width/2, Game.height/2);
   }
+
+  // Draw players.
+  // Player 1.
+  switch (player1.animationState) {
+    case 0:
+      canvasContext.drawImage(redNinjaIdle[player1.currentFrame], player1.x, player1.y);
+      break;
+    case 1:
+      canvasContext.drawImage(redNinjaRunning[player1.currentFrame], player1.x, player1.y);
+      break;
+    case 2:
+      canvasContext.drawImage(redNinjaInAir[player1.currentFrame], player1.x, player1.y);
+      break;
+    case 3:
+      canvasContext.drawImage(redNinjaAttackingAndBlocking[player1.currentFrame], player1.x, player1.y);
+      break;
+  }
+  // Player 2.
+  switch (player2.animationState) {
+    case 0:
+      canvasContext.drawImage(blueNinjaIdle[player2.currentFrame], player2.x, player2.y);
+      break;
+    case 1:
+      canvasContext.drawImage(blueNinjaRunning[player2.currentFrame], player2.x, player2.y);
+      break;
+    case 2:
+      canvasContext.drawImage(blueNinjaInAir[player2.currentFrame], player2.x, player2.y);
+      break;
+    case 3:
+      canvasContext.drawImage(blueNinjaAttackingAndBlocking[player2.currentFrame], player2.x, player2.y);
+      break;
+  }
 }
