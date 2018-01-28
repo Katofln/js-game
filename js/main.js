@@ -60,3 +60,47 @@ grassTileRightCorner.src = 'assets/tiles/grassTileRightCorner.png';
 // Backgrounds
 var forrestBackground = new Image();
 forrestBackground.src = 'assets/backgrounds/forrestBackground.png';
+
+// Player 1
+var redNinjaIdle = new Array();
+for (var i = 0; i < 1; i++) {
+  redNinjaIdle[i] = new Image();
+  redNinjaIdle[i].src = 'assets/redNinja/idle/' + i + '.png';
+}
+var redNinjaRunning = new Array();
+for (var i = 0; i < 1; i++) {
+  redNinjaRunning[i] = new Image();
+  redNinjaRunning[i].src = 'assets/redNinja/running/' + i + '.png';
+}
+var redNinjaInAir = new Array();
+for (var i = 0; i < 1; i++) {
+  redNinjaInAir[i] = new Image();
+  redNinjaInAir[i].src = 'assets/redNinja/inAir/' + i + '.png';
+}
+var redNinjaAttackingAndBlocking = new Array();
+for (var i = 0; i < 1; i++) {
+  redNinjaAttackingAndBlocking[i] = new Image();
+  redNinjaAttackingAndBlocking[i].src = 'assets/redNinja/attackingAndBlocking/' + i + '.png';
+}
+
+// Player 2
+var blueNinjaIdle = new Array();
+for (var i = 0; i < 1; i++) {
+  blueNinjaIdle[i] = new Image();
+  blueNinjaIdle[i].src = 'assets/blueNinja/idle/' + i + '.png';
+}
+var blueNinjaRunning = new Array();
+for (var i = 0; i < 1; i++) {
+  blueNinjaRunning[i] = new Image();
+  blueNinjaRunning[i].src = 'assets/blueNinja/running/' + i + '.png';
+}
+var blueNinjaInAir = new Array();
+for (var i = 0; i < 1; i++) {
+  blueNinjaInAir[i] = new Image();
+  blueNinjaInAir[i].src = 'assets/blueNinja/inAir/' + i + '.png';
+}
+var blueNinjaAttackingAndBlocking = new Array();
+for (var i = 0; i < 1; i++) {
+  blueNinjaAttackingAndBlocking[i] = new Image();
+  blueNinjaAttackingAndBlocking[i].src = 'assets/blueNinja/attackingAndBlocking/' + i + '.png';
+}

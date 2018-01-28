@@ -82,5 +82,5 @@ function Player (x, y) {
 }
 
 // Declare the two players.
-player1 = new Player(50, Game.height - player1.height - Tilemap.tileSize);
-player2 = new Player(Game.width - player2.width - 50, Game.height - player1.height - Tilemap.tileSize);
+player1 = new Player(50, 768 - 150 - 32);
+player2 = new Player(1024 - 100 - 50, 768 - 150 - 32);
