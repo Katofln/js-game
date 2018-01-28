@@ -2,6 +2,8 @@
 function Player (gravity, x, y, hp) {
   this.gravity = gravity;
 
+  this.width = 120;
+  this.height = 87;
   this.x = x;
   this.y = y;
   this.xVelocity = 0;
