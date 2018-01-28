@@ -6,6 +6,7 @@ var IsKeyDown = {
   wKey:false,
   cKey:false,   // Attack/block.
   vKey:false,   // Shuriken.
+
   // Player 2.
   leftKey:false,
   rightKey:false,
@@ -84,3 +85,59 @@ document.addEventListener('keyup', function(event) {
       IsKeyDown.vKey = false;
   }
 });
+
+function updateInput() {
+  // Player 1.
+  if (IsKeyDown.aKey) {
+    player1.moveLeftKey = true;
+  } else {
+    player1.moveLeftKey = false;
+  }
+  if (IsKeyDown.dKey) {
+    player1.moveRightKey = true;
+  } else {
+    player1.moveRightKey = false;
+  }
+  if (IsKeyDown.wKey) {
+    player1.jumpKey = true;
+  } else {
+    player1.jumpKey = false;
+  }
+  if (IsKeyDown.cKey) {
+    player1.attackAndBlockKey = true;
+  } else {
+    player1.attackAndBlockKey = false;
+  }
+  if (IsKeyDown.vKey) {
+    player1.shurikenKey = true;
+  } else {
+    player1.shurikenKey = false;
+  }
+
+  // Player 2
+  if (IsKeyDown.leftKey) {
+    player1.moveLeftKey = true;
+  } else {
+    player1.moveLeftKey = false;
+  }
+  if (IsKeyDown.rightKey) {
+    player1.moveRightKey = true;
+  } else {
+    player1.moveRightKey = false;
+  }
+  if (IsKeyDown.upKey) {
+    player1.jumpKey = true;
+  } else {
+    player1.jumpKey = false;
+  }
+  if (IsKeyDown.dotKey) {
+    player1.attackAndBlockKey = true;
+  } else {
+    player1.attackAndBlockKey = false;
+  }
+  if (IsKeyDown.commaKey) {
+    player1.shurikenKey = true;
+  } else {
+    player1.shurikenKey = false;
+  }
+}

@@ -11,8 +11,8 @@ function Player (gravity, x, y, hp) {
   this.wins = 0;  // Rounds player have won.
 
   // Keys held down.
-  this.moveRightKey = false;
   this.moveLeftKey = false;
+  this.moveRightKey = false;
   this.jumpKey = false;
   this.attackAndBlockKey = false;
   this.shurikenKey = false;
