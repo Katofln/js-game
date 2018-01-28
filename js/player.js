@@ -20,6 +20,16 @@ function Player (gravity, x, y, hp) {
   this.timesJumped = 0;
   this.jumpKeyHaveBeenReleasedInAir = false; // While jumping check if jump key have been released while in air, this is for double jump to work properly.
 
+  // Animations.
+  // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
+  this.animationState = 0;
+  this.currentFrame = 0;
+  // Frame counts.
+  this.idleFrames = 4;
+  this.runningFrames = 6;
+  this.inAirFrames = 4;
+  this.attackingAndBlockingFrames = 3;
+
   // Jump function.
   this.jump = function () {
     console.log("Player jumped.");
