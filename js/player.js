@@ -26,11 +26,14 @@ function Player (gravity, x, y, hp) {
   // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
   this.animationState = 0;
   this.currentFrame = 0;
-  // Frame counts.
-  this.idleFrames = 4;
-  this.runningFrames = 6;
-  this.inAirFrames = 1;
-  this.attackingAndBlockingFrames = 3;
+  this.updateAnimationState = function (state) {
+    // Update only animation state if it is not already that state.
+    if (this.animationState != state) {
+      this.animationState = state;
+      // Start animation at first frame.
+      this.currentFrame = 0;
+    }
+  }
 
   // Jump function.
   this.jump = function () {
@@ -54,7 +57,7 @@ function Player (gravity, x, y, hp) {
 
   // Called every update loop, checks input.
   this.handleInput = function () {
-
+    
   }
 }
 
