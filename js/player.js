@@ -27,7 +27,7 @@ function Player (gravity, x, y, hp) {
   // Frame counts.
   this.idleFrames = 4;
   this.runningFrames = 6;
-  this.inAirFrames = 4;
+  this.inAirFrames = 1;
   this.attackingAndBlockingFrames = 3;
 
   // Jump function.
