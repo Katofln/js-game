@@ -3,7 +3,7 @@ Game.update = function () {
   if (Game.running) {
     // Check player input.
     updateInput();
-
+    console.log(player1.shurikenKey);
     // Call key input handle function.
     player1.handleInput();
     player2.handleInput();
