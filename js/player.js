@@ -2,8 +2,8 @@
 function Player (x, y) {
   this.gravity = 1;
 
-  this.width = 120;
-  this.height = 87;
+  this.width = 100;
+  this.height = 150;
   this.x = x;
   this.y = y;
   this.xVelocity = 0;
@@ -82,5 +82,5 @@ function Player (x, y) {
 }
 
 // Declare the two players.
-player1 = new Player(50, 400);
-player2 = new Player(300, 400);
+player1 = new Player(50, Game.height - player1.height - Tilemap.tileSize);
+player2 = new Player(Game.width - player2.width - 50, Game.height - player1.height - Tilemap.tileSize);
