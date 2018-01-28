@@ -1,15 +1,17 @@
 // Holds current value of what is pressed down.
 var IsKeyDown = {
-    leftKey:false,
-    rightKey:false,
-    upKey:false,
-    dotKey:false,
-    commaKey:false,
-    aKey:false,
-    dKey:false,
-    wKey:false,
-    cKey:false,
-    vKey:false,
+  // Player 1.
+  aKey:false,
+  dKey:false,
+  wKey:false,
+  cKey:false,   // Attack/block.
+  vKey:false,   // Shuriken.
+  // Player 2.
+  leftKey:false,
+  rightKey:false,
+  upKey:false,
+  dotKey:false,   // Attack/block.
+  commaKey:false  // Shuriken.
 };
 
 // Called everytime key is pressed.

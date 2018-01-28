@@ -15,6 +15,7 @@ function Player (gravity, x, y, hp) {
   this.moveLeftKey = false;
   this.jumpKey = false;
   this.attackAndBlockKey = false;
+  this.shurikenKey = false;
 
   this.timesJumped = 0;
   this.jumpKeyHaveBeenReleasedInAir = false; // While jumping check if jump key have been released while in air, this is for double jump to work properly.
@@ -37,6 +38,11 @@ function Player (gravity, x, y, hp) {
   // Attack/block.
   this.attackAndBlock = function () {
     console.log("Player attacked/blocked");
+  }
+
+  // Called every update loop, checks input.
+  this.handleInput = function () {
+
   }
 }
 
