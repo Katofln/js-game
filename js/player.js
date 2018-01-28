@@ -1,6 +1,6 @@
 // Player object constructor.
-function Player (gravity, x, y, hp) {
-  this.gravity = gravity;
+function Player (x, y) {
+  this.gravity = 1;
 
   this.width = 120;
   this.height = 87;
@@ -9,8 +9,12 @@ function Player (gravity, x, y, hp) {
   this.xVelocity = 0;
   this.yVelocity = 0;
 
-  this.hp = hp;
+  this.hp = 100;
   this.wins = 0;  // Rounds player have won.
+
+  // Set how much damage attacks deal.
+  this.shurikenDamage = 10;
+  this.meleeDamage = 10;
 
   // Keys held down.
   this.moveLeftKey = false;
@@ -57,10 +61,26 @@ function Player (gravity, x, y, hp) {
 
   // Called every update loop, checks input.
   this.handleInput = function () {
-    
+
+  }
+
+  this.takeShurikenDamage = function (dmg) {
+    this.hp -= dmg;
+  }
+
+  this.takeMeleeDamage = function (dmg) {
+    this.hp -= dmg;
+  }
+
+  this.isPlayerDead = function () {
+    if (this.hp <= 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 
 // Declare the two players.
-player1 = new Player(1, 50, 400, 100);
-player2 = new Player(1, 300, 400, 100);
+player1 = new Player(50, 400);
+player2 = new Player(300, 400);
