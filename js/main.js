@@ -39,7 +39,19 @@ function objectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight
       }
     }
   }
-  return false; // If not coliding, retun false.
+  return false; // If not colliding, retun false.
+}
+
+function objectsColliding (obj1x, obj1y, obj1width, obj1height, obj2x, obj2y, obj2width, obj2height) {
+  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+  if (obj1x < obj2x + obj2width &&
+    obj1x + obj1width > obj2x &&
+    obj1y < obj2y + obj2height &&
+    obj1height + obj1y > obj2y) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Get canvas context.
