@@ -80,6 +80,12 @@ function Player (x, y) {
     }
   }
 
+  this.isPlayerTouchingGround = function () {
+    if (objectCollidingWithTilemap(this.x, this.y, this.width, this.height)) {
+      console.log("Player is touching ground.");
+    }
+  }
+
   // Variable to not let movement update run more than once per frame.
   this.lastRenderTick = 0;
   this.updateMovement = function () {

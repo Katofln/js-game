@@ -18,15 +18,14 @@ function objectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight
   var currentTileX = 0;
   var currentTileY = 0;
   for (var i = 0; i < Tilemap.map.length; i++) {
-    if (objectX < currentTileX + Tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
-         objectX + objectWidth > currentTileX &&
-         objectY < currentTileY + Tilemap.tileSize &&
-         objectHeight + objectY > currentTileY
-       ) {
-         // Check if tile is not air.
-         if (Tilemap.map[i] > 0) {
-           return true;
-         }
+    if (objectX <= currentTileX + Tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+    objectX + objectWidth >= currentTileX &&
+    objectY <= currentTileY + Tilemap.tileSize &&
+    objectHeight + objectY >= currentTileY) {
+       // Check if tile is not air.
+       if (Tilemap.map[i] > 0) {
+         return true;
+       }
     } else {
       if (currentCol != Tilemap.columns) {
         currentCol++;
@@ -44,10 +43,10 @@ function objectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight
 
 function objectsColliding (obj1x, obj1y, obj1width, obj1height, obj2x, obj2y, obj2width, obj2height) {
   // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
-  if (obj1x < obj2x + obj2width &&
-    obj1x + obj1width > obj2x &&
-    obj1y < obj2y + obj2height &&
-    obj1height + obj1y > obj2y) {
+  if (obj1x <= obj2x + obj2width &&
+  obj1x + obj1width >= obj2x &&
+  obj1y <= obj2y + obj2height &&
+  obj1height + obj1y >= obj2y) {
     return true;
   } else {
     return false;
