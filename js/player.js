@@ -79,6 +79,16 @@ function Player (x, y) {
       return false;
     }
   }
+
+  // Variable to not let movement update run more than once per frame.
+  this.lastRenderTick = 0;
+  this.updateMovement = function () {
+    if (Game.currentRenderTick > this.lastRenderTick) {
+      // TODO
+
+      this.lastRenderTick = Game.currentRenderTick;
+    }
+  }
 }
 
 // Declare the two players.
