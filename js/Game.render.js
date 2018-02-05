@@ -79,5 +79,5 @@ Game.render = function () {
   }
 
   // Increase the render tick number for time calculation.
-  currentRenderTick++;
+  Game.currentRenderTick++;
 }
