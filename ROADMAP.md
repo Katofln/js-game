@@ -9,4 +9,4 @@ Development of working alpha.
 Game testing and fixing various issues.
 
 ## 1. May
-The main project is done.
+The project is done, and version 1 is ready to be released.
