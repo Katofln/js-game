@@ -2,8 +2,8 @@
 function Player (x, y) {
   this.gravity = 1;
 
-  this.width = 64;
-  this.height = 92;
+  this.width = 48;
+  this.height = 64;
   this.x = x;
   this.y = y;
   this.xVelocity = 0;
@@ -82,5 +82,5 @@ function Player (x, y) {
 }
 
 // Declare the two players.
-player1 = new Player(50, 768 - 92 - 32);
-player2 = new Player(1024 - 64 - 50, 768 - 92 - 32);
+player1 = new Player(50, 768 - 64 - 32);
+player2 = new Player(1024 - 48 - 50, 768 - 64 - 32);
