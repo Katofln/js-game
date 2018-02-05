@@ -77,4 +77,7 @@ Game.render = function () {
       canvasContext.drawImage(blueNinjaAttackingAndBlocking[player2.currentFrame], player2.x, player2.y);
       break;
   }
+
+  // Increase the render tick number for time calculation.
+  currentRenderTick++;
 }
