@@ -10,7 +10,7 @@ function getNewFallVelocity (gravity, yVelocity) {
 }
 
 // Return if an object is colliding with the tilemap.
-function objectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight) {
+function isObjectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight) {
   // TODO: Might be able to optimize this.
   // Loop though each tile to check if an object is coliding with the tilemap.
   var currentRow = 1;
@@ -27,7 +27,7 @@ function objectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight
            return true;
        }
     }
-    
+
     if (currentCol != Tilemap.columns) {
       currentCol++;
       currentTileX += Tilemap.tileSize;
@@ -41,7 +41,25 @@ function objectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight
   return false; // If not colliding, retun false.
 }
 
-function objectsColliding (obj1x, obj1y, obj1width, obj1height, obj2x, obj2y, obj2width, obj2height) {
+// Check if object is colliding with tilemap from different sides.
+
+function isObjectCollidingWithTilemapLeft (objectX, objectY, objectWidth, objectHeight) {
+  // TODO
+}
+
+function isObjectCollidingWithTilemapRight (objectX, objectY, objectWidth, objectHeight) {
+  // TODO
+}
+
+function isObjectCollidingWithTilemapTop (objectX, objectY, objectWidth, objectHeight) {
+  // TODO
+}
+
+function isObjectCollidingWithTilemapDown (objectX, objectY, objectWidth, objectHeight) {
+  // TODO
+}
+
+function isObjectsColliding (obj1x, obj1y, obj1width, obj1height, obj2x, obj2y, obj2width, obj2height) {
   // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
   if (obj1x <= obj2x + obj2width &&
   obj1x + obj1width >= obj2x &&

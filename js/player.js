@@ -87,7 +87,7 @@ function Player (x, y) {
   }
 
   this.isPlayerTouchingTilemap = function () {
-    if (objectCollidingWithTilemap(this.x, this.y, this.width, this.height)) {
+    if (isObjectCollidingWithTilemap(this.x, this.y, this.width, this.height)) {
       return true;
     } else {
       return false;
