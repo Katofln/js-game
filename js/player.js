@@ -86,9 +86,11 @@ function Player (x, y) {
     }
   }
 
-  this.isPlayerTouchingGround = function () {
+  this.isPlayerTouchingTilemap = function () {
     if (objectCollidingWithTilemap(this.x, this.y, this.width, this.height)) {
-      console.log("Player is touching ground.");
+      return true;
+    } else {
+      return false;
     }
   }
 
