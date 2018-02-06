@@ -8,6 +8,8 @@ function Player (x, y) {
   this.y = y;
   this.xVelocity = 0;
   this.yVelocity = 0;
+  this.maxVelocity = 100;
+  this.moveSpeed = 10;
 
   this.hp = 100;
   this.wins = 0;  // Rounds player have won.
