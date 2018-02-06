@@ -42,6 +42,7 @@ function isObjectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeig
 }
 
 // Check if object is colliding with tilemap from different sides.
+// TODO: Link might be helpful: https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
 
 function isObjectCollidingWithTilemapLeft (objectX, objectY, objectWidth, objectHeight) {
   // TODO
