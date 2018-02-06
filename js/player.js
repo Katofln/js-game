@@ -1,11 +1,13 @@
 // Player object constructor.
 function Player (x, y) {
-  this.gravity = 1;
-
+  // Position and size.
   this.width = 48;
   this.height = 64;
   this.x = x;
   this.y = y;
+
+  // Velocity.
+  this.gravity = 1;
   this.xVelocity = 0;
   this.yVelocity = 0;
   this.maxVelocity = 100;
@@ -26,6 +28,7 @@ function Player (x, y) {
   this.attackAndBlockKey = false;
   this.shurikenKey = false;
 
+  // Double jump.
   this.timesJumped = 0;
   this.jumpKeyHaveBeenReleasedInAir = false; // While jumping check if jump key have been released while in air, this is for double jump to work properly.
 
