@@ -116,28 +116,28 @@ function updateInput() {
 
   // Player 2
   if (IsKeyDown.leftKey) {
-    player1.moveLeftKey = true;
+    player2.moveLeftKey = true;
   } else {
-    player1.moveLeftKey = false;
+    player2.moveLeftKey = false;
   }
   if (IsKeyDown.rightKey) {
-    player1.moveRightKey = true;
+    player2.moveRightKey = true;
   } else {
-    player1.moveRightKey = false;
+    player2.moveRightKey = false;
   }
   if (IsKeyDown.upKey) {
-    player1.jumpKey = true;
+    player2.jumpKey = true;
   } else {
-    player1.jumpKey = false;
+    player2.jumpKey = false;
   }
   if (IsKeyDown.dotKey) {
-    player1.attackAndBlockKey = true;
+    player2.attackAndBlockKey = true;
   } else {
-    player1.attackAndBlockKey = false;
+    player2.attackAndBlockKey = false;
   }
   if (IsKeyDown.commaKey) {
-    player1.shurikenKey = true;
+    player2.shurikenKey = true;
   } else {
-    player1.shurikenKey = false;
+    player2.shurikenKey = false;
   }
 }
