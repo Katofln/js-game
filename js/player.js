@@ -89,8 +89,11 @@ function Player (x, y) {
 
     // Apply gravity if player not standing on tile.
     if (isObjectCollidingWithTilemapReturnSide (this.x, this.y, this.width, this.height) != "down") {
-      this.yVelocity -= this.gravity; 
+      this.yVelocity -= this.gravity;
     }
+
+    // Move player by y-axis, but only so that if a tile is in the way, it touches it, and does not go through it.
+    // TODO
   }
 
   // Variable to not let movement update run more than once per frame.
