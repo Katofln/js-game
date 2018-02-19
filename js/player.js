@@ -86,6 +86,11 @@ function Player (x, y) {
     if (this.jumpKey) {
       this.jump();
     }
+
+    // Apply gravity if player not standing on tile.
+    if (isObjectCollidingWithTilemapReturnSide (this.x, this.y, this.width, this.height) != "down") {
+      this.yVelocity -= this.gravity; 
+    }
   }
 
   // Variable to not let movement update run more than once per frame.
