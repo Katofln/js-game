@@ -45,20 +45,56 @@ function isObjectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeig
 
 // TODO: Link might be helpful: https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
 
-function isObjectCollidingWithTilemapLeft (objectX, objectY, objectWidth, objectHeight) {
-  // TODO
-}
+// Check if object is colliding with tilemap, return "false" if no collision or "left", "right", "up", "down" if collision.
+function isObjectCollidingWithTilemapReturnSide (objectX, objectY, objectWidth, objectHeight) {
 
-function isObjectCollidingWithTilemapRight (objectX, objectY, objectWidth, objectHeight) {
-  // TODO
-}
+  var currentRow = 1;
+  var currentCol = 1;
+  var currentTileX = 0;
+  var currentTileY = 0;
+  for (var i = 0; i < Tilemap.map.length; i++) {
+    // Check if tile is not air.
+    if (Tilemap.map[i] > 0) {
+      if (objectX <= currentTileX + Tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+      objectX + objectWidth >= currentTileX &&
+      objectY <= currentTileY + Tilemap.tileSize &&
+      objectHeight + objectY >= currentTileY) {   // Inspired by https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
 
-function isObjectCollidingWithTilemapTop (objectX, objectY, objectWidth, objectHeight) {
-  // TODO
-}
+        // Down.
+        if(objectY <= currentTileY - (Tilemap.tileSize / 2)) {
+          return "down";
+        }
 
-function isObjectCollidingWithTilemapDown (objectX, objectY, objectWidth, objectHeight) {
-  // TODO
+        // Up.
+        if(objectY >= currentTileY + (Tilemap.tileSize / 2)) {
+          return "up";
+        }
+
+        // Left.
+        if(objectX < currentTileX) {
+          return "left";
+        }
+
+        // Right.
+        if(objectX > currentTileX) {
+          return "right";
+        }
+
+      }
+    }
+
+    if (currentCol != Tilemap.columns) {
+      currentCol++;
+      currentTileX += Tilemap.tileSize;
+    } else {
+      currentCol = 1;
+      currentTileX = 0;
+      currentTileY += Tilemap.tileSize;
+      currentRow++;
+    }
+  }
+
+  return false;
 }
 
 function isObjectsColliding (obj1x, obj1y, obj1width, obj1height, obj2x, obj2y, obj2width, obj2height) {
