@@ -9,6 +9,8 @@ function getNewFallVelocity (gravity, yVelocity) {
   return gravity + yVelocity;
 }
 
+// Check if object is colliding with tilemap from different sides. (Colision is detected if objects are close enough to touch.)
+
 // Return if an object is colliding with the tilemap.
 function isObjectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight) {
   // TODO: Might be able to optimize this.
@@ -41,7 +43,6 @@ function isObjectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeig
   return false; // If not colliding, retun false.
 }
 
-// Check if object is colliding with tilemap from different sides.
 // TODO: Link might be helpful: https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
 
 function isObjectCollidingWithTilemapLeft (objectX, objectY, objectWidth, objectHeight) {
