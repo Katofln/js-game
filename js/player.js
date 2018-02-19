@@ -65,11 +65,6 @@ function Player (x, y) {
     console.log("Player attacked/blocked");
   }
 
-  // Called every update loop, checks input.
-  this.handleInput = function () {
-
-  }
-
   this.takeShurikenDamage = function (dmg) {
     this.hp -= dmg;
   }
@@ -86,12 +81,15 @@ function Player (x, y) {
     }
   }
 
-  this.isPlayerTouchingTilemap = function () {
-    if (isObjectCollidingWithTilemap(this.x, this.y, this.width, this.height)) {
-      return true;
-    } else {
-      return false;
-    }
+  // Called every update loop, checks input.
+  this.handleInput = function () {
+    // Jump key pressed.
+
+  }
+
+  // Called directly every update loop. Updates basicly everything in reletion to player.
+  this.update = function () {
+    this.handleInput();
   }
 
   // Variable to not let movement update run more than once per frame.
