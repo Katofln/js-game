@@ -81,15 +81,11 @@ function Player (x, y) {
     }
   }
 
-  // Called every update loop, checks input.
-  this.handleInput = function () {
-    // Jump key pressed.
-
-  }
-
   // Called directly every update loop. Updates basicly everything in reletion to player.
   this.update = function () {
-    this.handleInput();
+    if (this.jumpKey) {
+      this.jump();
+    }
   }
 
   // Variable to not let movement update run more than once per frame.
