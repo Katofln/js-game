@@ -43,10 +43,9 @@ function isObjectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeig
   return false; // If not colliding, retun false.
 }
 
-// TODO: Link might be helpful: https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
-
-// Check if object is colliding with tilemap, return "false" if no collision or "left", "right", "up", "down" if collision.
-function isObjectCollidingWithTilemapReturnSide (objectX, objectY, objectWidth, objectHeight) {
+// Check which sides of tilemap object is colliding with.
+// Left.
+function isObjectCollidingWithTilemapLeft (objectX, objectY, objectWidth, objectHeight) {
 
   var currentRow = 1;
   var currentCol = 1;
@@ -60,24 +59,9 @@ function isObjectCollidingWithTilemapReturnSide (objectX, objectY, objectWidth, 
       objectY <= currentTileY + Tilemap.tileSize &&
       objectHeight + objectY >= currentTileY) {   // Inspired by https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
 
-        // Down.
-        if(objectY <= currentTileY - (Tilemap.tileSize / 2)) {
-          return "down";
-        }
-
-        // Up.
-        if(objectY >= currentTileY + (Tilemap.tileSize / 2)) {
-          return "up";
-        }
-
         // Left.
         if(objectX < currentTileX) {
-          return "left";
-        }
-
-        // Right.
-        if(objectX > currentTileX) {
-          return "right";
+          return true;
         }
 
       }
@@ -96,6 +80,115 @@ function isObjectCollidingWithTilemapReturnSide (objectX, objectY, objectWidth, 
 
   return false;
 }
+// Right.
+function isObjectCollidingWithTilemapRight (objectX, objectY, objectWidth, objectHeight) {
+
+  var currentRow = 1;
+  var currentCol = 1;
+  var currentTileX = 0;
+  var currentTileY = 0;
+  for (var i = 0; i < Tilemap.map.length; i++) {
+    // Check if tile is not air.
+    if (Tilemap.map[i] > 0) {
+      if (objectX <= currentTileX + Tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+      objectX + objectWidth >= currentTileX &&
+      objectY <= currentTileY + Tilemap.tileSize &&
+      objectHeight + objectY >= currentTileY) {   // Inspired by https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
+
+        // Right.
+        if(objectX > currentTileX) {
+          return true;
+        }
+
+      }
+    }
+
+    if (currentCol != Tilemap.columns) {
+      currentCol++;
+      currentTileX += Tilemap.tileSize;
+    } else {
+      currentCol = 1;
+      currentTileX = 0;
+      currentTileY += Tilemap.tileSize;
+      currentRow++;
+    }
+  }
+
+  return false;
+}
+// Up.
+function isObjectCollidingWithTilemapUp (objectX, objectY, objectWidth, objectHeight) {
+
+  var currentRow = 1;
+  var currentCol = 1;
+  var currentTileX = 0;
+  var currentTileY = 0;
+  for (var i = 0; i < Tilemap.map.length; i++) {
+    // Check if tile is not air.
+    if (Tilemap.map[i] > 0) {
+      if (objectX <= currentTileX + Tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+      objectX + objectWidth >= currentTileX &&
+      objectY <= currentTileY + Tilemap.tileSize &&
+      objectHeight + objectY >= currentTileY) {   // Inspired by https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
+
+        // Up.
+        if(objectY >= currentTileY + (Tilemap.tileSize / 2)) {
+          return true;
+        }
+
+      }
+    }
+
+    if (currentCol != Tilemap.columns) {
+      currentCol++;
+      currentTileX += Tilemap.tileSize;
+    } else {
+      currentCol = 1;
+      currentTileX = 0;
+      currentTileY += Tilemap.tileSize;
+      currentRow++;
+    }
+  }
+
+  return false;
+}
+// Down.
+function isObjectCollidingWithTilemapDown (objectX, objectY, objectWidth, objectHeight) {
+
+  var currentRow = 1;
+  var currentCol = 1;
+  var currentTileX = 0;
+  var currentTileY = 0;
+  for (var i = 0; i < Tilemap.map.length; i++) {
+    // Check if tile is not air.
+    if (Tilemap.map[i] > 0) {
+      if (objectX <= currentTileX + Tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+      objectX + objectWidth >= currentTileX &&
+      objectY <= currentTileY + Tilemap.tileSize &&
+      objectHeight + objectY >= currentTileY) {   // Inspired by https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
+
+        // Down.
+        if(objectY <= currentTileY - (Tilemap.tileSize / 2)) {
+          return true;
+        }
+
+      }
+    }
+
+    if (currentCol != Tilemap.columns) {
+      currentCol++;
+      currentTileX += Tilemap.tileSize;
+    } else {
+      currentCol = 1;
+      currentTileX = 0;
+      currentTileY += Tilemap.tileSize;
+      currentRow++;
+    }
+  }
+
+  return false;
+}
+
 
 function isObjectsColliding (obj1x, obj1y, obj1width, obj1height, obj2x, obj2y, obj2width, obj2height) {
   // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection

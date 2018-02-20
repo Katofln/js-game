@@ -88,7 +88,7 @@ function Player (x, y) {
     }
 
     // Apply gravity if player not standing on tile.
-    if (isObjectCollidingWithTilemapReturnSide (this.x, this.y, this.width, this.height) != "down") {
+    if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == false) {
       this.yVelocity -= this.gravity;
     }
 
