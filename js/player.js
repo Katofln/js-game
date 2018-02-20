@@ -83,17 +83,23 @@ function Player (x, y) {
 
   // Called directly every update loop. Updates basicly everything in reletion to player.
   this.update = function () {
+    // Apply gravity if player not standing on tile.
+    if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == false) {
+      this.yVelocity -= this.gravity;
+    } else if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == true) {
+      // If player standing on ground.
+      this.yVelocity = 0;
+    }
+
     if (this.jumpKey) {
       this.jump();
     }
 
-    // Apply gravity if player not standing on tile.
-    if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == false) {
-      this.yVelocity -= this.gravity;
-    }
-
     // Move player by y-axis, but only so that if a tile is in the way, it touches it, and does not go through it.
-    // TODO
+    // If player moving downwards.
+    if (this.yVelocity < 0) {
+
+    }
   }
 
   // Variable to not let movement update run more than once per frame.
