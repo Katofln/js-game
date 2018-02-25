@@ -103,6 +103,9 @@ function Player (x, y) {
       // Move player by y-axis, but only so that if a tile is in the way, it touches it, and does not go through it.
       // If player moving downwards.
       if (this.yVelocity < 0) {
+        // For loop to move player by one whole pixel each loop, until either velocity have been moved or player touching tile.
+
+      } else if (this.yVelocity > 0) {
 
       }
 
