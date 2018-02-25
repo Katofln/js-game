@@ -81,33 +81,32 @@ function Player (x, y) {
     }
   }
 
-  // Called directly every update loop. Updates basicly everything in reletion to player.
-  this.update = function () {
-    // Apply gravity if player not standing on tile.
-    if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == false) {
-      this.yVelocity -= this.gravity;
-    } else if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == true) {
-      // If player standing on ground.
-      this.yVelocity = 0;
-    }
-
-    if (this.jumpKey) {
-      this.jump();
-    }
-
-    // Move player by y-axis, but only so that if a tile is in the way, it touches it, and does not go through it.
-    // If player moving downwards.
-    if (this.yVelocity < 0) {
-
-    }
-  }
-
   // Variable to not let movement update run more than once per frame.
   this.lastRenderTick = 0;
-  this.updateMovement = function () {
-    if (Game.currentRenderTick > this.lastRenderTick) {
-      // TODO
 
+  // Called directly every update loop. Updates basicly everything in reletion to player.
+  this.update = function () {
+    // Allow movement only if render function gets called.
+    if (Game.currentRenderTick > this.lastRenderTick) {
+      // Apply gravity if player not standing on tile.
+      if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == false) {
+        this.yVelocity -= this.gravity;
+      } else if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == true) {
+        // If player standing on ground.
+        this.yVelocity = 0;
+      }
+
+      if (this.jumpKey) {
+        this.jump();
+      }
+
+      // Move player by y-axis, but only so that if a tile is in the way, it touches it, and does not go through it.
+      // If player moving downwards.
+      if (this.yVelocity < 0) {
+
+      }
+
+      // Update last render tick variable.
       this.lastRenderTick = Game.currentRenderTick;
     }
   }
