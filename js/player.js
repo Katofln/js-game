@@ -90,7 +90,7 @@ function Player (x, y) {
     if (Game.currentRenderTick > this.lastRenderTick) {
       // Apply gravity if player not standing on tile.
       if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == false) {
-        this.yVelocity -= this.gravity;
+        this.yVelocity += this.gravity;
       } else if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == true) {
         // If player standing on ground.
         this.yVelocity = 0;
@@ -111,7 +111,7 @@ function Player (x, y) {
           // Increase newY variable by one each loop to move slowly downards.
           newY++;
           // Break loop if collision from tilemap downwards is detected.
-          if (isObjectCollidingWithTilemapDown(this.x, newY, this.width, this,height)) {
+          if (isObjectCollidingWithTilemapDown(this.x, newY, this.width, this.height)) {
             break;
           }
         }
