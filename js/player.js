@@ -12,7 +12,7 @@ function Player (x, y) {
   this.yVelocity = 0;
   this.maxVelocity = 100;
   this.moveVelocity= 10;
-  this.jumpVelocity = 100;
+  this.jumpVelocity = -20;
 
   this.hp = 100;
   this.wins = 0;  // Rounds player have won.
@@ -48,6 +48,9 @@ function Player (x, y) {
   // Jump function.
   this.jump = function () {
     console.log("Player jumped.");
+    if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height)) {
+      this.yVelocity = this.jumpVelocity;
+    }
   }
 
   // Move left.
@@ -121,7 +124,16 @@ function Player (x, y) {
 
       // If player moving upwards.
       } else if (this.yVelocity < 0) {
-        // TODO
+        var newY = this.y;
+
+        while (newY > (this.y + this.yVelocity)) {
+          newY--;
+          if (isObjectCollidingWithTilemapUp(this.x, newY, this.width, this.height)) {
+            break;
+          }
+        }
+
+        this.y = newY;
       }
 
       // Update last render tick variable.
