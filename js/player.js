@@ -102,11 +102,26 @@ function Player (x, y) {
 
       // Move player by y-axis, but only so that if a tile is in the way, it touches it, and does not go through it.
       // If player moving downwards.
-      if (this.yVelocity < 0) {
+      if (this.yVelocity > 0) {
+        // Stores the players new y value.
+        var newY = this.y;
+
         // For loop to move player by one whole pixel each loop, until either velocity have been moved or player touching tile.
+        while (newY < (this.y + this.yVelocity)) {
+          // Increase newY variable by one each loop to move slowly downards.
+          newY++;
+          // Break loop if collision from tilemap downwards is detected.
+          if (isObjectCollidingWithTilemapDown(this.x, newY, this.width, this,height)) {
+            break;
+          }
+        }
 
-      } else if (this.yVelocity > 0) {
+        // Set new y value.
+        this.y = newY;
 
+      // If player moving upwards.
+      } else if (this.yVelocity < 0) {
+        // TODO
       }
 
       // Update last render tick variable.
