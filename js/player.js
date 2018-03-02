@@ -7,12 +7,12 @@ function Player (x, y) {
   this.y = y;
 
   // Velocity.
-  this.gravity = 1;
+  this.gravity = 1.5;
   this.xVelocity = 0;
   this.yVelocity = 0;
   this.maxVelocity = 100;
   this.moveVelocity= 10;
-  this.jumpVelocity = -20;
+  this.jumpVelocity = -25;
 
   this.hp = 100;
   this.wins = 0;  // Rounds player have won.
@@ -47,7 +47,6 @@ function Player (x, y) {
 
   // Jump function.
   this.jump = function () {
-    console.log("Player jumped.");
     if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height)) {
       this.yVelocity = this.jumpVelocity;
     }
