@@ -30,7 +30,9 @@ function Player (x, y) {
 
   // Double jump.
   this.timesJumped = 0;
-  this.jumpKeyHaveBeenReleasedInAir = false; // While jumping check if jump key have been released while in air, this is for double jump to work properly.
+  this.maxJumpTimes = 2;
+  // While jumping check if jump key have been released while in air, this is for double jump to work properly.
+  this.jumpKeyHaveBeenReleasedInAir = false;
 
   // Animations.
   // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
@@ -43,23 +45,6 @@ function Player (x, y) {
       // Start animation at first frame.
       this.currentFrame = 0;
     }
-  }
-
-  // Jump function.
-  this.jump = function () {
-    if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height)) {
-      this.yVelocity = this.jumpVelocity;
-    }
-  }
-
-  // Move left.
-  this.moveLeft = function () {
-
-  }
-
-  // Move right.
-  this.moveRight = function () {
-
   }
 
   // Attack/block.
@@ -106,8 +91,16 @@ function Player (x, y) {
         this.yVelocity = 0;
       }
 
+      if (!isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) && !this.jumpKey) {
+        this.jumpKeyHaveBeenReleasedInAir = true;
+      }
       if (this.jumpKey) {
-        this.jump();
+        // Jumping from ground.
+        if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) || (this.jumpKeyHaveBeenReleasedInAir && this.timesJumped < this.maxJumpTimes)) {
+          this.yVelocity = this.jumpVelocity;
+          this.timesJumped++;
+          this.jumpKeyHaveBeenReleasedInAir = false;
+        }
       }
 
       // Move player by y-axis, but only so that if a tile is in the way, it touches it, and does not go through it.
