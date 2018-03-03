@@ -121,7 +121,7 @@ function Player (x, y) {
         // Set new y value.
         this.y = newY;
 
-      // If player moving upwards.
+    // If player moving upwards.
     } else if (this.yVelocity < 0 && !isObjectCollidingWithTilemapUp(this.x, this.y, this.width, this.height)) {
         var newY = this.y;
 
@@ -133,6 +133,10 @@ function Player (x, y) {
         }
 
         this.y = newY;
+
+      // Kill of upwards velocity if player is collding with object upwards.
+      } else if (this.yVelocity < 0 && isObjectCollidingWithTilemapUp(this.x, this.y, this.width, this.height)) {
+        this.yVelocity = 0;
       }
 
       // Update last render tick variable.
