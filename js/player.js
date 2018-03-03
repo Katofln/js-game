@@ -104,7 +104,7 @@ function Player (x, y) {
 
       // Move player by y-axis, but only so that if a tile is in the way, it touches it, and does not go through it.
       // If player moving downwards.
-      if (this.yVelocity > 0) {
+      if (this.yVelocity > 0 && !isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height)) {
         // Stores the players new y value.
         var newY = this.y;
 
@@ -122,7 +122,7 @@ function Player (x, y) {
         this.y = newY;
 
       // If player moving upwards.
-      } else if (this.yVelocity < 0) {
+    } else if (this.yVelocity < 0 && !isObjectCollidingWithTilemapUp(this.x, this.y, this.width, this.height)) {
         var newY = this.y;
 
         while (newY > (this.y + this.yVelocity)) {
