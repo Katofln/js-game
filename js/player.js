@@ -10,8 +10,8 @@ function Player (x, y) {
   this.gravity = 1.5;
   this.xVelocity = 0;
   this.yVelocity = 0;
-  this.maxVelocity = 100;
-  this.moveVelocity= 10;
+  this.maxYVelocity = 100;
+  this.moveVelocity = 10;
   this.jumpVelocity = -25;
 
   this.hp = 100;
@@ -96,6 +96,11 @@ function Player (x, y) {
       // Apply gravity if player not standing on tile.
       if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == false) {
         this.yVelocity += this.gravity;
+
+        // Ensure yVelocity is never larger than maxYVelocity.
+        if (this.yVelocity > this.maxYVelocity) {
+          this.yVelocity = this.maxYVelocity;
+        }
       } else if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == true) {
         // If player standing on ground.
         this.yVelocity = 0;
