@@ -129,8 +129,8 @@ function Player (x, y) {
         // Set new y value.
         this.y = newY;
 
-    // If player moving upwards.
-    } else if (this.yVelocity < 0 && !isObjectCollidingWithTilemapUp(this.x, this.y, this.width, this.height)) {
+      // If player moving upwards.
+      } else if (this.yVelocity < 0 && !isObjectCollidingWithTilemapUp(this.x, this.y, this.width, this.height)) {
         var newY = this.y;
 
         while (newY > (this.y + this.yVelocity)) {
@@ -153,7 +153,7 @@ function Player (x, y) {
       /*
         End of x-axis movement.
       */
-      // TODO
+
       /*
         End of x-axis movement.
       */
