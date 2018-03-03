@@ -147,15 +147,15 @@ function Player (x, y) {
         this.yVelocity = 0;
       }
       /*
-        End of x-axis movement.
-      */
-      // TODO: New comments.
-      /*
-        End of x-axis movement.
+        End of y-axis movement.
       */
 
       /*
-        End of y-axis movement.
+        End of x-axis movement.
+      */
+      // TODO
+      /*
+        End of x-axis movement.
       */
 
       // Update last render tick variable.
