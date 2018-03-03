@@ -91,7 +91,7 @@ function Player (x, y) {
     // Allow movement only if render function gets called.
     if (Game.currentRenderTick > this.lastRenderTick) {
       /*
-        End of y-axis movement.
+        Start of y-axis movement.
       */
       // Apply gravity if player not standing on tile.
       if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == false) {
@@ -141,6 +141,14 @@ function Player (x, y) {
       } else if (this.yVelocity < 0 && isObjectCollidingWithTilemapUp(this.x, this.y, this.width, this.height)) {
         this.yVelocity = 0;
       }
+      /*
+        End of x-axis movement.
+      */
+      // TODO: New comments.
+      /*
+        End of x-axis movement.
+      */
+
       /*
         End of y-axis movement.
       */
