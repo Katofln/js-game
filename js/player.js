@@ -89,6 +89,7 @@ function Player (x, y) {
       } else if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == true) {
         // If player standing on ground.
         this.yVelocity = 0;
+        this.timesJumped = 0;
       }
 
       if (!isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) && !this.jumpKey) {
