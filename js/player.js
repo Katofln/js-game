@@ -145,7 +145,7 @@ function Player (x, y) {
       */
 
       /*
-        End of x-axis movement.
+        Start of x-axis movement.
       */
 
       /*
