@@ -13,7 +13,6 @@ function getNewFallVelocity (gravity, yVelocity) {
 
 // Return if an object is colliding with the tilemap.
 function isObjectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight) {
-  // TODO: Might be able to optimize this.
   // Loop though each tile to check if an object is coliding with the tilemap.
   var currentRow = 1;
   var currentCol = 1;
@@ -52,12 +51,11 @@ function isObjectCollidingWithTilemapLeft (objectX, objectY, objectWidth, object
   var currentTileX = 0;
   var currentTileY = 0;
   for (var i = 0; i < Tilemap.map.length; i++) {
-    // Check if tile is not air.
     if (Tilemap.map[i] > 0) {
-      if (objectX <= currentTileX + Tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+      if (objectX <= currentTileX + Tilemap.tileSize &&
       objectX + objectWidth >= currentTileX &&
       objectY <= currentTileY + Tilemap.tileSize &&
-      objectHeight + objectY >= currentTileY) {   // Inspired by https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
+      objectHeight + objectY >= currentTileY) {
 
         // Left.
         if(objectX < currentTileX) {
@@ -90,10 +88,10 @@ function isObjectCollidingWithTilemapRight (objectX, objectY, objectWidth, objec
   for (var i = 0; i < Tilemap.map.length; i++) {
     // Check if tile is not air.
     if (Tilemap.map[i] > 0) {
-      if (objectX <= currentTileX + Tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+      if (objectX <= currentTileX + Tilemap.tileSize &&
       objectX + objectWidth >= currentTileX &&
       objectY <= currentTileY + Tilemap.tileSize &&
-      objectHeight + objectY >= currentTileY) {   // Inspired by https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
+      objectHeight + objectY >= currentTileY) {
 
         // Right.
         if(objectX > currentTileX) {
@@ -126,10 +124,10 @@ function isObjectCollidingWithTilemapUp (objectX, objectY, objectWidth, objectHe
   for (var i = 0; i < Tilemap.map.length; i++) {
     // Check if tile is not air.
     if (Tilemap.map[i] > 0) {
-      if (objectX <= currentTileX + Tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+      if (objectX <= currentTileX + Tilemap.tileSize &&
       objectX + objectWidth >= currentTileX &&
       objectY <= currentTileY + Tilemap.tileSize &&
-      objectHeight + objectY >= currentTileY) {   // Inspired by https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
+      objectHeight + objectY >= currentTileY) {
 
         // Up.
         if(objectY >= currentTileY + (Tilemap.tileSize / 2)) {
@@ -162,10 +160,10 @@ function isObjectCollidingWithTilemapDown (objectX, objectY, objectWidth, object
   for (var i = 0; i < Tilemap.map.length; i++) {
     // Check if tile is not air.
     if (Tilemap.map[i] > 0) {
-      if (objectX <= currentTileX + Tilemap.tileSize &&  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
+      if (objectX <= currentTileX + Tilemap.tileSize &&
       objectX + objectWidth >= currentTileX &&
       objectY <= currentTileY + Tilemap.tileSize &&
-      objectHeight + objectY >= currentTileY) {   // Inspired by https://gamedev.stackexchange.com/questions/22609/breakout-collision-detecting-the-side-of-collision
+      objectHeight + objectY >= currentTileY) {
 
         // Down.
         if(objectY <= currentTileY - (Tilemap.tileSize / 2)) {
@@ -191,7 +189,6 @@ function isObjectCollidingWithTilemapDown (objectX, objectY, objectWidth, object
 
 
 function isObjectsColliding (obj1x, obj1y, obj1width, obj1height, obj2x, obj2y, obj2width, obj2height) {
-  // Inspired by https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection
   if (obj1x <= obj2x + obj2width &&
   obj1x + obj1width >= obj2x &&
   obj1y <= obj2y + obj2height &&
