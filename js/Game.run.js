@@ -41,5 +41,5 @@ window.onload = function () { // Run only when page has loaded.
   })();
 
   window.onEachFrame(Game.run);
-  // Code end.
+  // End of code snippet.
 }
