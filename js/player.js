@@ -47,6 +47,20 @@ function Player (x, y) {
     }
   }
 
+  // Reset player.
+  this.reset = function () {
+    this.xVelocity = 0;
+    this.yVelocity = 0;
+
+    this.animationState = 0;
+    this.currentFrame = 0;
+
+    this.hp = 100;
+
+    this.timesJumped = 0;
+    this.jumpKeyHaveBeenReleasedInAir = false;
+  }
+
   // Attack/block.
   this.attackAndBlock = function () {
     console.log("Player attacked/blocked");
@@ -183,5 +197,5 @@ function Player (x, y) {
 }
 
 // Declare the two players.
-player1 = new Player(50, 768 - 64 - 32);
-player2 = new Player(1024 - 48 - 50, 768 - 64 - 32);
+player1 = new Player(player1StartX, player1StartY);
+player2 = new Player(player2StartX, player2StartY);

@@ -1,5 +1,10 @@
 Game.initialize = function () {
-  // Reset the two player objects.
-  player1 = new Player(1, 50, 400, 100);
-  player2 = new Player(1, 300, 400, 100);
+  console.log("Starting new game...");
+
+  player1.reset;
+  player2.reset;
+  player1.x = player1StartX;
+  player1.y = player1StartY;
+  player2.x = player2StartX;
+  player2.y = player2StartY;
 }
