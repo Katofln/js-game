@@ -1,5 +1,3 @@
-// TODO: Refactor main.js
-
 /*
   Collision detection with tilemap.
 */
