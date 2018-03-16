@@ -14,12 +14,13 @@ function Player (x, y) {
   this.moveVelocity = 10;
   this.jumpVelocity = -25;
 
-  this.hp = 100;
-  this.wins = 0;  // Rounds player have won.
-
-  // Set how much damage attacks deal.
+  // Standard attack points for player.
   this.shurikenDamage = 10;
   this.meleeDamage = 10;
+
+  // Other.
+  this.hp = 100;
+  this.wins = 0;  // Rounds player have won.
 
   // Keys held down.
   this.moveLeftKey = false;
@@ -39,7 +40,6 @@ function Player (x, y) {
   this.animationState = 0;
   this.currentFrame = 0;
   this.updateAnimationState = function (state) {
-    // Update only animation state if it is not already that state.
     if (this.animationState != state) {
       this.animationState = state;
       // Start animation at first frame.
@@ -52,11 +52,8 @@ function Player (x, y) {
     console.log("Player attacked/blocked");
   }
 
-  this.takeShurikenDamage = function (dmg) {
-    this.hp -= dmg;
-  }
-
-  this.takeMeleeDamage = function (dmg) {
+  // Take damage.
+  this.takeDamage = function (dmg) {
     this.hp -= dmg;
   }
 
@@ -68,16 +65,13 @@ function Player (x, y) {
     }
   }
 
-  // Variable to not let movement update run more than once per frame.
+  // Variable to not let movement update run more than once per frame. This variable is also used for animation.
   this.lastRenderTick = 0;
 
-  // Called directly every update loop. Updates basicly everything in reletion to player.
   this.update = function () {
     // Allow movement only if render function gets called.
     if (Game.currentRenderTick > this.lastRenderTick) {
-      /*
-        Start of y-axis movement.
-      */
+      // Y-axis movement.
       // Apply gravity if player not standing on tile.
       if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == false) {
         this.yVelocity += this.gravity;
