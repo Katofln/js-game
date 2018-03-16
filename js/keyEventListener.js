@@ -86,7 +86,7 @@ document.addEventListener('keyup', function(event) {
   }
 });
 
-function updateInput() {
+function updateKeyInput() {
   // Player 1.
   if (IsKeyDown.aKey) {
     player1.moveLeftKey = true;

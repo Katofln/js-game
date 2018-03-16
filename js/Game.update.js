@@ -1,12 +1,11 @@
 Game.update = function () {
-  // Check weather game is running.
   if (Game.running) {
-    // Check player input.
-    updateInput();
-    // Call player update function.
+    updateKeyInput();
+
     player1.update();
     player2.update();
-  } else {  // If game is not running.
+  // If game is not running.
+  } else {
 
   }
 }
