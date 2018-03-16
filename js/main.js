@@ -1,7 +1,3 @@
-function getGameVersion() {
-  return gameVersion;
-}
-
 function getNewFallVelocity (gravity, yVelocity) {
   return gravity + yVelocity;
 }
