@@ -1,8 +1,8 @@
 // TODO: Refactor main.js
 
-// Check if object is colliding with tilemap from different sides. (Colision is detected if objects are close enough to touch.)
-
-// Return if an object is colliding with the tilemap.
+/*
+  Collision detection with tilemap.
+*/
 function isObjectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight) {
   // Loop though each tile to check if an object is coliding with the tilemap.
   var currentRow = 1;
@@ -30,11 +30,10 @@ function isObjectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeig
       currentRow++;
     }
   }
-  return false; // If not colliding, retun false.
+
+  return false;
 }
 
-// Check which sides of tilemap object is colliding with.
-// Left.
 function isObjectCollidingWithTilemapLeft (objectX, objectY, objectWidth, objectHeight) {
 
   var currentRow = 1;
@@ -69,7 +68,7 @@ function isObjectCollidingWithTilemapLeft (objectX, objectY, objectWidth, object
 
   return false;
 }
-// Right.
+
 function isObjectCollidingWithTilemapRight (objectX, objectY, objectWidth, objectHeight) {
 
   var currentRow = 1;
@@ -105,7 +104,7 @@ function isObjectCollidingWithTilemapRight (objectX, objectY, objectWidth, objec
 
   return false;
 }
-// Up.
+
 function isObjectCollidingWithTilemapUp (objectX, objectY, objectWidth, objectHeight) {
 
   var currentRow = 1;
@@ -141,7 +140,7 @@ function isObjectCollidingWithTilemapUp (objectX, objectY, objectWidth, objectHe
 
   return false;
 }
-// Down.
+
 function isObjectCollidingWithTilemapDown (objectX, objectY, objectWidth, objectHeight) {
 
   var currentRow = 1;
@@ -178,7 +177,6 @@ function isObjectCollidingWithTilemapDown (objectX, objectY, objectWidth, object
   return false;
 }
 
-
 function isObjectsColliding (obj1x, obj1y, obj1width, obj1height, obj2x, obj2y, obj2width, obj2height) {
   if (obj1x <= obj2x + obj2width &&
   obj1x + obj1width >= obj2x &&
@@ -189,6 +187,10 @@ function isObjectsColliding (obj1x, obj1y, obj1width, obj1height, obj2x, obj2y, 
     return false;
   }
 }
+
+/*
+  End collision detection.
+*/
 
 // Get canvas context.
 var canvas = document.getElementById("gameCanvas");
