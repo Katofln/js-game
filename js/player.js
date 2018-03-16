@@ -71,26 +71,30 @@ function Player (x, y) {
   this.update = function () {
     // Allow movement only if render function gets called.
     if (Game.currentRenderTick > this.lastRenderTick) {
-      // Y-axis movement.
+      /*
+        Y-axis movement.
+      */
       // Apply gravity if player not standing on tile.
-      if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == false) {
+      if (!isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height)) {
         this.yVelocity += this.gravity;
 
         // Ensure yVelocity is never larger than maxYVelocity.
         if (this.yVelocity > this.maxYVelocity) {
           this.yVelocity = this.maxYVelocity;
         }
-      } else if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) == true) {
-        // If player standing on ground.
+      // If player standing on ground.
+      } else if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height)) {
         this.yVelocity = 0;
         this.timesJumped = 0;
       }
 
+      // Jump key have been realesed in air.
       if (!isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) && !this.jumpKey) {
         this.jumpKeyHaveBeenReleasedInAir = true;
       }
+
       if (this.jumpKey) {
-        // Jumping from ground.
+        // Check if player is able to jump.
         if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) || (this.jumpKeyHaveBeenReleasedInAir && this.timesJumped < this.maxJumpTimes)) {
           this.yVelocity = this.jumpVelocity;
           this.timesJumped++;
@@ -130,16 +134,16 @@ function Player (x, y) {
 
         this.y = newY;
 
-      // Kill of upwards velocity if player is collding with object upwards.
+      // Kill upwards velocity if player is collding with object upwards.
       } else if (this.yVelocity < 0 && isObjectCollidingWithTilemapUp(this.x, this.y, this.width, this.height)) {
         this.yVelocity = 0;
       }
       /*
-        End of y-axis movement.
+        End y-axis movement.
       */
 
       /*
-        Start of x-axis movement.
+        X-axis movement.
       */
       var newX = this.x;
       // Player presses both or non move keys at the same time.
@@ -172,7 +176,7 @@ function Player (x, y) {
         End of x-axis movement.
       */
 
-      // Update last render tick variable.
+      // Update players last render tick to the games current render tick.
       this.lastRenderTick = Game.currentRenderTick;
     }
   }
