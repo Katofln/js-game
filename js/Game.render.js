@@ -35,8 +35,6 @@ Game.render = function () {
     }
   }
 
-
-
   // Check if game is NOT running and NOT on win screen.
   if (!Game.running && !Game.winScreen) {
     // Print that players need to ready up.
