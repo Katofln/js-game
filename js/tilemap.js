@@ -1,5 +1,5 @@
-var Tilemap = { // Stores tilemap settings.
-    tileSize:32,  // Width and height in pixels.
+var Tilemap = {
+    tileSize:32, // Width and height in pixels.
     rows:24,
     columns:32,
     map: [
