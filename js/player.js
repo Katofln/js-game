@@ -197,5 +197,5 @@ function Player (x, y) {
 }
 
 // Declare the two players.
-player1 = new Player(player1StartX, player1StartY);
-player2 = new Player(player2StartX, player2StartY);
+player1 = new Player(Game.player1StartX, Game.player1StartY);
+player2 = new Player(Game.player2StartX, Game.player2StartY);

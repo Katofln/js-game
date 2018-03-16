@@ -10,5 +10,5 @@ var Game = {
     player1StartX:50,
     player1StartY:672,
     player2StartX:926,
-    player2StartY:672,
+    player2StartY:672
 };
