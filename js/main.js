@@ -1,3 +1,5 @@
+// TODO: Refactor main.js
+
 // Check if object is colliding with tilemap from different sides. (Colision is detected if objects are close enough to touch.)
 
 // Return if an object is colliding with the tilemap.
