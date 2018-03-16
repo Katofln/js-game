@@ -1,5 +1,7 @@
 // Game looper.
-window.onload = function () { // Run only when page has loaded.
+window.onload = function () {
+  console.log("Game has successfully loaded.");
+
   // Code by Arthur Schreiber "Javascript Game Development - The Game Loop" - http://nokarma.org/2011/02/02/javascript-game-development-the-game-loop/index.html
   Game.run = (function() {
     var loops = 0, skipTicks = 1000 / Game.fps,
