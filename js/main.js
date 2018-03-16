@@ -1,6 +1,3 @@
-// Game version.
-gameVersion = "null";
-
 function getGameVersion() {
   return gameVersion;
 }
