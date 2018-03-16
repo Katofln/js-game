@@ -35,23 +35,18 @@ function isObjectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeig
 }
 
 function isObjectCollidingWithTilemapLeft (objectX, objectY, objectWidth, objectHeight) {
-
   var currentRow = 1;
   var currentCol = 1;
   var currentTileX = 0;
   var currentTileY = 0;
   for (var i = 0; i < Tilemap.map.length; i++) {
     if (Tilemap.map[i] > 0) {
-      if (objectX <= currentTileX + Tilemap.tileSize &&
+      if ((objectX <= currentTileX + Tilemap.tileSize &&
       objectX + objectWidth >= currentTileX &&
       objectY <= currentTileY + Tilemap.tileSize &&
-      objectHeight + objectY >= currentTileY) {
-
-        // Left.
-        if(objectX < currentTileX) {
-          return true;
-        }
-
+      objectHeight + objectY >= currentTileY) &&
+      (objectX < currentTileX)) {
+        return true;
       }
     }
 
@@ -70,24 +65,18 @@ function isObjectCollidingWithTilemapLeft (objectX, objectY, objectWidth, object
 }
 
 function isObjectCollidingWithTilemapRight (objectX, objectY, objectWidth, objectHeight) {
-
   var currentRow = 1;
   var currentCol = 1;
   var currentTileX = 0;
   var currentTileY = 0;
   for (var i = 0; i < Tilemap.map.length; i++) {
-    // Check if tile is not air.
     if (Tilemap.map[i] > 0) {
-      if (objectX <= currentTileX + Tilemap.tileSize &&
+      if ((objectX <= currentTileX + Tilemap.tileSize &&
       objectX + objectWidth >= currentTileX &&
       objectY <= currentTileY + Tilemap.tileSize &&
-      objectHeight + objectY >= currentTileY) {
-
-        // Right.
-        if(objectX > currentTileX) {
-          return true;
-        }
-
+      objectHeight + objectY >= currentTileY) &&
+      (objectX > currentTileX)) {
+        return true;
       }
     }
 
@@ -106,24 +95,18 @@ function isObjectCollidingWithTilemapRight (objectX, objectY, objectWidth, objec
 }
 
 function isObjectCollidingWithTilemapUp (objectX, objectY, objectWidth, objectHeight) {
-
   var currentRow = 1;
   var currentCol = 1;
   var currentTileX = 0;
   var currentTileY = 0;
   for (var i = 0; i < Tilemap.map.length; i++) {
-    // Check if tile is not air.
     if (Tilemap.map[i] > 0) {
-      if (objectX <= currentTileX + Tilemap.tileSize &&
+      if ((objectX <= currentTileX + Tilemap.tileSize &&
       objectX + objectWidth >= currentTileX &&
       objectY <= currentTileY + Tilemap.tileSize &&
-      objectHeight + objectY >= currentTileY) {
-
-        // Up.
-        if(objectY >= currentTileY + (Tilemap.tileSize / 2)) {
-          return true;
-        }
-
+      objectHeight + objectY >= currentTileY) &&
+      (objectY >= currentTileY + (Tilemap.tileSize / 2))) {
+        return true;
       }
     }
 
@@ -142,24 +125,18 @@ function isObjectCollidingWithTilemapUp (objectX, objectY, objectWidth, objectHe
 }
 
 function isObjectCollidingWithTilemapDown (objectX, objectY, objectWidth, objectHeight) {
-
   var currentRow = 1;
   var currentCol = 1;
   var currentTileX = 0;
   var currentTileY = 0;
   for (var i = 0; i < Tilemap.map.length; i++) {
-    // Check if tile is not air.
     if (Tilemap.map[i] > 0) {
-      if (objectX <= currentTileX + Tilemap.tileSize &&
+      if ((objectX <= currentTileX + Tilemap.tileSize &&
       objectX + objectWidth >= currentTileX &&
       objectY <= currentTileY + Tilemap.tileSize &&
-      objectHeight + objectY >= currentTileY) {
-
-        // Down.
-        if(objectY <= currentTileY - (Tilemap.tileSize / 2)) {
-          return true;
-        }
-
+      objectHeight + objectY >= currentTileY) &&
+      (objectY <= currentTileY - (Tilemap.tileSize / 2))) {
+        return true;
       }
     }
 
