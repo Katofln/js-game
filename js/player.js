@@ -40,6 +40,7 @@ function Player (x, y, animationDirection) {
   this.animationState = 0;
   this.currentFrame = 0;
   this.animationDirection = animationDirection; // Left or right.
+  this.lastAnimationDirection = "right";
   this.updateAnimationState = function (state) {
     if (this.animationState != state) {
       this.animationState = state;

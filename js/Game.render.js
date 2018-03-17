@@ -61,6 +61,10 @@ Game.render = function () {
       break;
   }
   // Player 2.
+  if (player2.animationDirection == "left" && player2.lastAnimationDirection != "left") {
+    //canvasContext.scale(-1, 1);
+    player2.lastAnimationDirection = "left";
+  }
   switch (player2.animationState) {
     case 0:
       canvasContext.drawImage(blueNinjaIdle[player2.currentFrame], player2.x, player2.y);
