@@ -127,8 +127,8 @@ function isObjectCollidingWithTilemapDown (objectX, objectY, objectWidth, object
   var currentTileY = 0;
   for (var i = 0; i < Tilemap.map.length; i++) {
     if (Tilemap.map[i] > 0) {
-      if ((objectX <= currentTileX + Tilemap.tileSize &&
-      objectX + objectWidth >= currentTileX &&
+      if ((objectX < currentTileX + Tilemap.tileSize &&
+      objectX + objectWidth > currentTileX &&
       objectY <= currentTileY + Tilemap.tileSize &&
       objectHeight + objectY >= currentTileY) &&
       (objectY <= currentTileY - (Tilemap.tileSize / 2))) {
