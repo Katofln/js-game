@@ -39,13 +39,10 @@ function isObjectCollidingWithTilemapLeft (objectX, objectY, objectWidth, object
   var currentTileY = 0;
   for (var i = 0; i < Tilemap.map.length; i++) {
     if (Tilemap.map[i] > 0) {
-      if ((objectX <= currentTileX + Tilemap.tileSize &&
-      objectX + objectWidth >= currentTileX &&
-      objectY <= currentTileY + Tilemap.tileSize &&
-      objectHeight + objectY >= currentTileY) &&
-      // Special left side collision check.
-      (objectX <= currentTileX &&
-      objectY + objectHeight < currentTileY)) {
+      if (objectX <= currentTileX + Tilemap.tileSize &&
+      objectX + objectWidth > currentTileX &&
+      objectY < currentTileY + Tilemap.tileSize &&
+      objectHeight + objectY > currentTileY) {
         return true;
       }
     }
@@ -71,13 +68,10 @@ function isObjectCollidingWithTilemapRight (objectX, objectY, objectWidth, objec
   var currentTileY = 0;
   for (var i = 0; i < Tilemap.map.length; i++) {
     if (Tilemap.map[i] > 0) {
-      if ((objectX <= currentTileX + Tilemap.tileSize &&
+      if (objectX < currentTileX + Tilemap.tileSize &&
       objectX + objectWidth >= currentTileX &&
-      objectY <= currentTileY + Tilemap.tileSize &&
-      objectHeight + objectY >= currentTileY) &&
-      // Special right side collision check.
-      (objectX >= currentTileX &&
-      objectY + objectHeight < currentTileY)) {
+      objectY < currentTileY + Tilemap.tileSize &&
+      objectHeight + objectY > currentTileY) {
         return true;
       }
     }
