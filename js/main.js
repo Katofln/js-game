@@ -43,7 +43,9 @@ function isObjectCollidingWithTilemapLeft (objectX, objectY, objectWidth, object
       objectX + objectWidth >= currentTileX &&
       objectY <= currentTileY + Tilemap.tileSize &&
       objectHeight + objectY >= currentTileY) &&
-      (objectX < currentTileX)) {
+      // Special left side collision check.
+      (objectX <= currentTileX &&
+      objectY + objectHeight < currentTileY)) {
         return true;
       }
     }
@@ -73,7 +75,9 @@ function isObjectCollidingWithTilemapRight (objectX, objectY, objectWidth, objec
       objectX + objectWidth >= currentTileX &&
       objectY <= currentTileY + Tilemap.tileSize &&
       objectHeight + objectY >= currentTileY) &&
-      (objectX > currentTileX)) {
+      // Special right side collision check.
+      (objectX >= currentTileX &&
+      objectY + objectHeight < currentTileY)) {
         return true;
       }
     }
