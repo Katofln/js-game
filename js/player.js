@@ -1,5 +1,5 @@
 // Player object constructor.
-function Player (x, y) {
+function Player (x, y, animationDirection) {
   // Position and size.
   this.width = 48;
   this.height = 64;
@@ -39,6 +39,7 @@ function Player (x, y) {
   // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
   this.animationState = 0;
   this.currentFrame = 0;
+  this.animationDirection = animationDirection; // Left or right.
   this.updateAnimationState = function (state) {
     if (this.animationState != state) {
       this.animationState = state;
@@ -197,5 +198,5 @@ function Player (x, y) {
 }
 
 // Declare the two players.
-player1 = new Player(Game.player1StartX, Game.player1StartY);
-player2 = new Player(Game.player2StartX, Game.player2StartY);
+player1 = new Player(Game.player1StartX, Game.player1StartY, Game.player1StartAnimationDirection);
+player2 = new Player(Game.player2StartX, Game.player2StartY, Game.player2StartAnimationDirection);
