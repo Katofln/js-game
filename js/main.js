@@ -186,7 +186,7 @@ forrestBackground.src = 'assets/backgrounds/forrestBackground.png';
 
 // Player 1
 var redNinjaIdle = new Array();
-for (var i = 0; i < 1; i++) {
+for (var i = 0; i < 4; i++) {
   redNinjaIdle[i] = new Image();
   redNinjaIdle[i].src = 'assets/redNinja/idle/' + i + '.png';
 }
@@ -208,7 +208,7 @@ for (var i = 0; i < 1; i++) {
 
 // Player 2
 var blueNinjaIdle = new Array();
-for (var i = 0; i < 1; i++) {
+for (var i = 0; i < 4; i++) {
   blueNinjaIdle[i] = new Image();
   blueNinjaIdle[i].src = 'assets/blueNinja/idle/' + i + '.png';
 }

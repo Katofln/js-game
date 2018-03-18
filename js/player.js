@@ -47,6 +47,7 @@ function Player (x, y, animationDirection) {
       this.currentFrame = 0;
     }
   }
+  this.idleAnimationFrames = 4;
 
   // Reset player.
   this.reset = function () {
@@ -86,6 +87,23 @@ function Player (x, y, animationDirection) {
   this.update = function () {
     // Allow movement only if render function gets called.
     if (Game.currentRenderTick > this.lastRenderTick) {
+      /*
+        Animation.
+      */
+      // Increase animation frames.
+      switch (this.animationState) {
+        case 0:
+          if (this.currentFrame < this.idleAnimationFrames - 1) {
+            this.currentFrame++;
+          } else {
+            this.currentFrame = 0;
+          }
+          break;
+      }
+      /*
+        End animation.
+      */
+
       /*
         Y-axis movement.
       */
