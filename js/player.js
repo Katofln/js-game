@@ -237,6 +237,27 @@ function Player (x, y, animationDirection) {
         End of x-axis movement.
       */
 
+      /*
+        Update animation states.
+      */
+      // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
+      // Player attacking or blocking.
+      if (this.attackingOrBlocking) {
+        this.updateAnimationState(3);
+      // Player in air.
+      } else if (this.yVelocity != 0) {
+        this.updateAnimationState(3);
+      // Player running.
+      } else if (this.xVelocity != 0) {
+        this.updateAnimationState(1);
+      // Player idle.
+      } else {
+        this.updateAnimationState(0);
+      }
+      /*
+        End update animation states.
+      */
+
       // Update players last render tick to the games current render tick.
       this.lastRenderTick = Game.currentRenderTick;
     }
