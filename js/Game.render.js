@@ -51,20 +51,20 @@ Game.render = function () {
     canvasContext.translate(player1.x + player1.width, player1.y);
     canvasContext.scale(-1, 1);
   } else if (player1.animationDirection == "right") {
-    canvasContext.translate(player1.x + player1.width, player1.y);
+    canvasContext.translate(player1.x, player1.y);
   }
   switch (player1.animationState) {
     case 0:
-      canvasContext.drawImage(blueNinjaIdle[player1.currentFrame], 0, 0);
+      canvasContext.drawImage(redNinjaIdle[player1.currentFrame], 0, 0);
       break;
     case 1:
-      canvasContext.drawImage(blueNinjaRunning[player1.currentFrame], 0, 0);
+      canvasContext.drawImage(redNinjaRunning[player1.currentFrame], 0, 0);
       break;
     case 2:
-      canvasContext.drawImage(blueNinjaInAir[player1.currentFrame], 0, 0);
+      canvasContext.drawImage(redNinjaInAir[player1.currentFrame], 0, 0);
       break;
     case 3:
-      canvasContext.drawImage(blueNinjaAttackingAndBlocking[player1.currentFrame], 0, 0);
+      canvasContext.drawImage(redNinjaAttackingAndBlocking[player1.currentFrame], 0, 0);
       break;
   }
   canvasContext.restore();
@@ -74,7 +74,7 @@ Game.render = function () {
     canvasContext.translate(player2.x + player2.width, player2.y);
     canvasContext.scale(-1, 1);
   } else if (player2.animationDirection == "right") {
-    canvasContext.translate(player2.x + player2.width, player2.y);
+    canvasContext.translate(player2.x, player2.y);
   }
   switch (player2.animationState) {
     case 0:

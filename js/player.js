@@ -163,6 +163,7 @@ function Player (x, y, animationDirection) {
       var newX = this.x;
       // Player presses both or non move keys at the same time.
       if ((this.moveLeftKey && this.moveRightKey) || (!this.moveLeftKey && !this.moveRightKey)) {
+        this.animationDirection = "left";
         this.xVelocity = 0;
       // Player presses left move key and is not touching tile to the left.
       } else if (this.moveLeftKey && !isObjectCollidingWithTilemapLeft(this.x, this.y, this.width, this.height)) {
@@ -176,6 +177,7 @@ function Player (x, y, animationDirection) {
         }
       // Player presses right move key and is not touching tile to the right.
       } else if (this.moveRightKey && !isObjectCollidingWithTilemapRight(this.x, this.y, this.width, this.height)) {
+        this.animationDirection = "right";
         this.xVelocity = this.moveVelocity;
         while (newX < (this.x + this.xVelocity)) {
           newX++;
