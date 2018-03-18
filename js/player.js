@@ -93,9 +93,8 @@ function Player (x, y, animationDirection) {
     // Allow movement only if render function gets called.
     if (Game.currentRenderTick > this.lastRenderTick) {
       /*
-        Animation.
+        Increase animation frames.
       */
-      // Increase animation frames.
       // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
       switch (this.animationState) {
         case 0:
@@ -128,7 +127,7 @@ function Player (x, y, animationDirection) {
           break;
       }
       /*
-        End animation.
+        End increase animation frames.
       */
 
       /*
