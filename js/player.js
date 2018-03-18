@@ -17,6 +17,8 @@ function Player (x, y, animationDirection) {
   // Standard attack points for player.
   this.shurikenDamage = 10;
   this.meleeDamage = 10;
+  // If player currently attacking or blocking.
+  this.attackingOrBlocking = false;
 
   // Other.
   this.hp = 100;
