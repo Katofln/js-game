@@ -48,6 +48,9 @@ function Player (x, y, animationDirection) {
     }
   }
   this.idleAnimationFrames = 4;
+  this.runningAnimationFrames = 1;
+  this.inAirAnimationFrames = 1;
+  this.attackingOrBlockingAnimationFrames = 1;
 
   // Reset player.
   this.reset = function () {
@@ -91,9 +94,31 @@ function Player (x, y, animationDirection) {
         Animation.
       */
       // Increase animation frames.
+      // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
       switch (this.animationState) {
         case 0:
           if (this.currentFrame < this.idleAnimationFrames - 1) {
+            this.currentFrame++;
+          } else {
+            this.currentFrame = 0;
+          }
+          break;
+        case 1:
+          if (this.currentFrame < this.runningAnimationFrames - 1) {
+            this.currentFrame++;
+          } else {
+            this.currentFrame = 0;
+          }
+          break;
+        case 2:
+          if (this.currentFrame < this.inAirAnimationFrames - 1) {
+            this.currentFrame++;
+          } else {
+            this.currentFrame = 0;
+          }
+          break;
+        case 3:
+          if (this.currentFrame < this.attackingOrBlockingAnimationFrames - 1) {
             this.currentFrame++;
           } else {
             this.currentFrame = 0;
