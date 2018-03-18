@@ -46,39 +46,51 @@ Game.render = function () {
 
   // Draw players.
   // Player 1.
+  canvasContext.save();
+  if (player1.animationDirection == "left") {
+    canvasContext.translate(player1.x + player1.width, player1.y);
+    canvasContext.scale(-1, 1);
+  } else if (player1.animationDirection == "right") {
+    canvasContext.translate(player1.x + player1.width, player1.y);
+  }
   switch (player1.animationState) {
     case 0:
-      canvasContext.drawImage(redNinjaIdle[player1.currentFrame], player1.x, player1.y);
+      canvasContext.drawImage(blueNinjaIdle[player1.currentFrame], 0, 0);
       break;
     case 1:
-      canvasContext.drawImage(redNinjaRunning[player1.currentFrame], player1.x, player1.y);
+      canvasContext.drawImage(blueNinjaRunning[player1.currentFrame], 0, 0);
       break;
     case 2:
-      canvasContext.drawImage(redNinjaInAir[player1.currentFrame], player1.x, player1.y);
+      canvasContext.drawImage(blueNinjaInAir[player1.currentFrame], 0, 0);
       break;
     case 3:
-      canvasContext.drawImage(redNinjaAttackingAndBlocking[player1.currentFrame], player1.x, player1.y);
+      canvasContext.drawImage(blueNinjaAttackingAndBlocking[player1.currentFrame], 0, 0);
       break;
   }
+  canvasContext.restore();
   // Player 2.
-  if (player2.animationDirection == "left" && player2.lastAnimationDirection != "left") {
-    //canvasContext.scale(-1, 1);
-    player2.lastAnimationDirection = "left";
+  canvasContext.save();
+  if (player2.animationDirection == "left") {
+    canvasContext.translate(player2.x + player2.width, player2.y);
+    canvasContext.scale(-1, 1);
+  } else if (player2.animationDirection == "right") {
+    canvasContext.translate(player2.x + player2.width, player2.y);
   }
   switch (player2.animationState) {
     case 0:
-      canvasContext.drawImage(blueNinjaIdle[player2.currentFrame], player2.x, player2.y);
+      canvasContext.drawImage(blueNinjaIdle[player2.currentFrame], 0, 0);
       break;
     case 1:
-      canvasContext.drawImage(blueNinjaRunning[player2.currentFrame], player2.x, player2.y);
+      canvasContext.drawImage(blueNinjaRunning[player2.currentFrame], 0, 0);
       break;
     case 2:
-      canvasContext.drawImage(blueNinjaInAir[player2.currentFrame], player2.x, player2.y);
+      canvasContext.drawImage(blueNinjaInAir[player2.currentFrame], 0, 0);
       break;
     case 3:
-      canvasContext.drawImage(blueNinjaAttackingAndBlocking[player2.currentFrame], player2.x, player2.y);
+      canvasContext.drawImage(blueNinjaAttackingAndBlocking[player2.currentFrame], 0, 0);
       break;
   }
+  canvasContext.restore();
 
   // Increase the render tick number for time calculation.
   Game.currentRenderTick++;
