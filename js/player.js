@@ -12,7 +12,7 @@ function Player (x, y, animationDirection) {
   this.yVelocity = 0;
   this.maxYVelocity = 100;
   this.moveVelocity = 15;
-  this.jumpVelocity = -25;
+  this.jumpVelocity = -20;
 
   // Standard attack points for player.
   this.shurikenDamage = 10;
