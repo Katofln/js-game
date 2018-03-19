@@ -98,10 +98,12 @@ function Player (x, y, animationDirection) {
       // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
       switch (this.animationState) {
         case 0:
-          if (this.currentFrame < this.idleAnimationFrames - 1) {
-            this.currentFrame++;
-          } else {
-            this.currentFrame = 0;
+        if (Game.currentRenderTick % 5 == 0) { // This is to slow down animation.
+            if (this.currentFrame < this.idleAnimationFrames - 1) {
+              this.currentFrame++;
+            } else {
+              this.currentFrame = 0;
+            }
           }
           break;
         case 1:
