@@ -50,7 +50,7 @@ function Player (x, y, animationDirection) {
     }
   }
   this.idleAnimationFrames = 4;
-  this.runningAnimationFrames = 1;
+  this.runningAnimationFrames = 6;
   this.inAirAnimationFrames = 1;
   this.attackingOrBlockingAnimationFrames = 1;
 

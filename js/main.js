@@ -191,7 +191,7 @@ for (var i = 0; i < 4; i++) {
   redNinjaIdle[i].src = 'assets/redNinja/idle/' + i + '.png';
 }
 var redNinjaRunning = new Array();
-for (var i = 0; i < 1; i++) {
+for (var i = 0; i < 6; i++) {
   redNinjaRunning[i] = new Image();
   redNinjaRunning[i].src = 'assets/redNinja/running/' + i + '.png';
 }
@@ -213,7 +213,7 @@ for (var i = 0; i < 4; i++) {
   blueNinjaIdle[i].src = 'assets/blueNinja/idle/' + i + '.png';
 }
 var blueNinjaRunning = new Array();
-for (var i = 0; i < 1; i++) {
+for (var i = 0; i < 6; i++) {
   blueNinjaRunning[i] = new Image();
   blueNinjaRunning[i].src = 'assets/blueNinja/running/' + i + '.png';
 }
