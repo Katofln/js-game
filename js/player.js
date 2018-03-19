@@ -11,7 +11,7 @@ function Player (x, y, animationDirection) {
   this.xVelocity = 0;
   this.yVelocity = 0;
   this.maxYVelocity = 100;
-  this.moveVelocity = 10;
+  this.moveVelocity = 15;
   this.jumpVelocity = -25;
 
   // Standard attack points for player.
