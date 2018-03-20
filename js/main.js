@@ -175,10 +175,10 @@ var groundTile = new Image();
 groundTile.src = 'assets/tiles/groundTile.png';
 var grassTile = new Image();
 grassTile.src = 'assets/tiles/grassTile.png';
-var grassTileLeftCorner = new Image();
-grassTileLeftCorner.src = 'assets/tiles/grassTileLeftCorner.png';
-var grassTileRightCorner = new Image();
-grassTileRightCorner.src = 'assets/tiles/grassTileRightCorner.png';
+var brownTile = new Image();
+brownTile.src = 'assets/tiles/brownTile.png';
+var brownGrassTile = new Image();
+brownGrassTile.src = 'assets/tiles/brownGrassTile.png';
 
 // Backgrounds
 var forrestBackground = new Image();

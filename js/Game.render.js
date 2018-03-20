@@ -17,10 +17,10 @@ Game.render = function () {
           canvasContext.drawImage(grassTile, currentTileX, currentTileY);
           break;
         case 3:
-          canvasContext.drawImage(grassTileLeftCorner, currentTileX, currentTileY);
+          canvasContext.drawImage(brownTile, currentTileX, currentTileY);
           break;
         case 4:
-          canvasContext.drawImage(grassTileRightCorner, currentTileX, currentTileY);
+          canvasContext.drawImage(brownGrassTile, currentTileX, currentTileY);
       }
     }
 
