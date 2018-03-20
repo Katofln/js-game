@@ -248,7 +248,7 @@ function Player (x, y, animationDirection) {
         this.updateAnimationState(3);
       // Player in air.
       } else if (this.yVelocity != 0) {
-        this.updateAnimationState(3);
+        this.updateAnimationState(2);
       // Player running.
       } else if (this.xVelocity != 0) {
         this.updateAnimationState(1);
