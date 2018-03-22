@@ -8,8 +8,9 @@
 
 ## April
 - Work on beta by start of arpil.
+- Shurikens should be added, if the sufficent time for adding attack/block, then that will be added too.
 - Game testing and fixing various issues by end or mid of month.
-- Gold or beta version should be ready.
+- Gold or beta version should be ready by end of month.
 
 ## 1. May
 - The project is done, and version 1 (gold) is ready to be released.
