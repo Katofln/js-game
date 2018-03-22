@@ -1,6 +1,6 @@
 # Mechanics
 ## Attack/Block
-A player can once every 1.000 ms attack or block for 100 ms.
+A player can once every 1.000 ms attack or block for 500 ms.
 ## Throw Shuriken (throwing star)
 A player can throw a Shuriken every 1.000 ms. A player can max have 3 Shurikans at a time, the player can how many there are left at the top of the screen. A player gets a new Shuriken every 5.000 ms. When the shuriken hits a tile it stops and gets destroyed.
 ## Playoff format
