@@ -19,6 +19,11 @@ function Player (x, y, animationDirection) {
   this.meleeDamage = 10;
   // If player currently attacking or blocking.
   this.attackingOrBlocking = false;
+  // Stores tick values for attacking, blocking and throwing shurikens.
+  this.tickTimeBetweenShurikenThrows = 30;
+  this.tickTimeBetweenNewShurikens = 30 * 5;
+  this.tickTimeBetweenAttackOrBlocks = 30;
+  this.tickTimeForDurationOfAttack = 15;
 
   // Other.
   this.hp = 100;
