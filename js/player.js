@@ -221,14 +221,14 @@ function Player (x, y, animationDirection) {
             break;
           }
         }
-      // Player presses right move key and is not touching tile to the right.
-      } else if (this.moveRightKey && !isObjectCollidingWithTilemapRight(this.x, this.y, this.width, this.height)) {
+      // Player presses right move key and is not touching tile to the right or border of map.
+      } else if (this.moveRightKey && !isObjectCollidingWithTilemapRight(this.x, this.y, this.width, this.height) && this.x < Game.width - this.width) {
         this.animationDirection = "right";
         this.xVelocity = this.moveVelocity;
         while (newX < (this.x + this.xVelocity)) {
           newX++;
 
-          if (isObjectCollidingWithTilemapRight(newX, this.y, this.width, this.height)) {
+          if (isObjectCollidingWithTilemapRight(newX, this.y, this.width, this.height) || this.x >= Game.width - this.width) {
             break;
           }
         }
