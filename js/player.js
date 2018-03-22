@@ -210,14 +210,14 @@ function Player (x, y, animationDirection) {
       // Player presses both or non move keys at the same time.
       if ((this.moveLeftKey && this.moveRightKey) || (!this.moveLeftKey && !this.moveRightKey)) {
         this.xVelocity = 0;
-      // Player presses left move key and is not touching tile to the left.
-      } else if (this.moveLeftKey && !isObjectCollidingWithTilemapLeft(this.x, this.y, this.width, this.height)) {
+      // Player presses left move key and is not touching tile to the left or border of map.
+      } else if (this.moveLeftKey && !isObjectCollidingWithTilemapLeft(this.x, this.y, this.width, this.height) && this.x > 0) {
         this.animationDirection = "left";
         this.xVelocity = this.moveVelocity;
         while (newX > (this.x - this.xVelocity)) {
           newX--;
 
-          if (isObjectCollidingWithTilemapLeft(newX, this.y, this.width, this.height)) {
+          if (isObjectCollidingWithTilemapLeft(newX, this.y, this.width, this.height) || this.x <= 0) {
             break;
           }
         }
