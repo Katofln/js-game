@@ -18,17 +18,17 @@ function Player (x, y, animationDirection) {
   this.shurikenDamage = 10;
   this.meleeDamage = 10;
   // If player currently attacking or blocking.
-  this.attackingOrBlocking = false;
-  // Stores tick values for attacking, blocking and throwing shurikens.
+  this.attackingAndBlocking = false;
+  // Stores tick values for attacking/blocking and throwing shurikens.
   this.tickTimeBetweenShurikenThrows = 30;
   this.tickTimeBetweenNewShurikens = 30 * 5;
-  this.tickTimeBetweenAttackOrBlocks = 30;
+  this.tickTimeBetweenAttackAndBlocks = 30;
   this.tickTimeForDurationOfAttack = 15;
   // Store tick times to next actions.
   this.tickTimeToNextShurikenThrow = 0;
-  this.tickTimeToNextAttackOrBlock = 0;
+  this.tickTimeToNextAttackAndBlock = 0;
   // Store tick times for previous actions.
-  this.tickTimeToAttackOrBlockEnd = 0;
+  this.tickTimeToAttackAndBlockEnd = 0;
 
   // Other.
   this.hp = 100;
@@ -65,7 +65,7 @@ function Player (x, y, animationDirection) {
   this.idleAnimationFrames = 4;
   this.runningAnimationFrames = 6;
   this.inAirAnimationFrames = 1;
-  this.attackingOrBlockingAnimationFrames = 1;
+  this.attackingAndBlockingAnimationFrames = 1;
 
   // Reset player.
   this.reset = function () {
@@ -134,7 +134,7 @@ function Player (x, y, animationDirection) {
           }
           break;
         case 3:
-          if (this.currentFrame < this.attackingOrBlockingAnimationFrames - 1) {
+          if (this.currentFrame < this.attackingAndBlockingAnimationFrames - 1) {
             this.currentFrame++;
           } else {
             this.currentFrame = 0;
@@ -257,7 +257,7 @@ function Player (x, y, animationDirection) {
       */
       // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
       // Player attacking or blocking.
-      if (this.attackingOrBlocking) {
+      if (this.attackingAndBlocking) {
         this.updateAnimationState(3);
       // Player in air.
       } else if (this.yVelocity != 0) {
