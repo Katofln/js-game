@@ -12,5 +12,8 @@ var Game = {
     player2StartX:926,
     player2StartY:672,
     player1StartAnimationDirection:"right",
-    player2StartAnimationDirection:"left"
+    player2StartAnimationDirection:"left",
+
+    shurikenWidth:25,
+    shurikenHeight:25
 };
