@@ -254,6 +254,18 @@ function Player (x, y, animationDirection) {
       */
 
       /*
+        Shurikens.
+      */
+      // Check if shurken is thrown and add it to the list of shurikens in air.
+      // TODO
+      /*if (shurikenKey && ) {
+
+      }*/
+      /*
+        End of shurkens.
+      */
+
+      /*
         Update animation states.
       */
       // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
