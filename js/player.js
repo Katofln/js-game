@@ -19,8 +19,8 @@ function Player (x, y, animationDirection) {
   // Standard attack points for player.
   this.shurikenDamage = 10;
   this.meleeDamage = 10;
-  this.shurikens = 3;
   this.maxShurikens = 3; // Max Shurikens player can have in hand.
+  this.shurikens = this.maxShurikens; // Shurikens player currently have in hand.
   // If player currently attacking or blocking.
   this.attackingAndBlocking = false;
   // Stores tick values for attacking/blocking and throwing shurikens.
@@ -280,7 +280,9 @@ function Player (x, y, animationDirection) {
         this.throwShuriken();
       }
       // Generate new shurikens.
-      // TODO
+      if (this.shurikens < this.maxShurikens) {
+
+      }
       /*
         End of shurkens.
       */
