@@ -19,6 +19,7 @@ function Player (x, y, animationDirection) {
   // Standard attack points for player.
   this.shurikenDamage = 10;
   this.meleeDamage = 10;
+  this.shurikens = 3;
   this.maxShurikens = 3; // Max Shurikens player can have in hand.
   // If player currently attacking or blocking.
   this.attackingAndBlocking = false;
@@ -91,11 +92,16 @@ function Player (x, y, animationDirection) {
 
   // Throw shuriken.
   this.throwShuriken = function () {
-    // Make shuriken spawn x and y values.
-    var spawnX = this.x + this.width / 2;
-    var spawnY = this.y + this.height / 3;
-    // Add new shuriken to array.
-    this.shurikensInAir.push([this.animationDirection, spawnX, spawnY]); // Direction, x and y.
+    if (this.shurikens > 0) {
+      // Make shuriken spawn x and y values.
+      var spawnX = this.x + this.width / 2;
+      var spawnY = this.y + this.height / 3;
+      // Add new shuriken to array.
+      this.shurikensInAir.push([this.animationDirection, spawnX, spawnY]); // Direction, x and y.
+
+      this.shurikens--;
+      console.log("Shuriken thrown.");
+    }
   }
 
   // Take damage.
@@ -268,10 +274,11 @@ function Player (x, y, animationDirection) {
         Shurikens.
       */
       // Check if shurken is thrown and add it to the list of shurikens in air.
+      if (this.shurikenKey) {
+        this.throwShuriken();
+      }
+      // Generate new shurikens.
       // TODO
-      /*if (shurikenKey && ) {
-
-      }*/
       /*
         End of shurkens.
       */
