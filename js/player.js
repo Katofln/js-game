@@ -92,7 +92,7 @@ function Player (x, y, animationDirection) {
 
   // Throw shuriken.
   this.throwShuriken = function () {
-    if (this.shurikens > 0) {
+    if (this.shurikens > 0 && Game.currentRenderTick > this.tickTimeToNextShurikenThrow) {
       // Make shuriken spawn x and y values.
       var spawnX = this.x + this.width / 2;
       var spawnY = this.y + this.height / 3;
@@ -100,6 +100,8 @@ function Player (x, y, animationDirection) {
       this.shurikensInAir.push([this.animationDirection, spawnX, spawnY]); // Direction, x and y.
 
       this.shurikens--;
+      this.tickTimeToNextShurikenThrow = Game.currentRenderTick + this.tickTimeBetweenShurikenThrows;
+
       console.log("Shuriken thrown.");
     }
   }
