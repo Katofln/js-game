@@ -14,6 +14,8 @@ function Player (x, y, animationDirection) {
   this.moveVelocity = 15;
   this.jumpVelocity = -20;
 
+  this.shurikenVelocity = 30;
+
   // Standard attack points for player.
   this.shurikenDamage = 10;
   this.meleeDamage = 10;
@@ -85,6 +87,11 @@ function Player (x, y, animationDirection) {
   // Attack/block.
   this.attackAndBlock = function () {
     console.log("Player attacked/blocked");
+  }
+
+  // Throw shuriken.
+  this.throwShuriken = function () {
+    
   }
 
   // Take damage.
