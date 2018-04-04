@@ -50,14 +50,14 @@ function Player (x, y, animationDirection) {
   // While jumping check if jump key have been released while in air, this is for double jump to work properly.
   this.jumpKeyHaveBeenReleasedInAir = false;
 
-  // Shurikens player have throwed and are currently in air, stores x and y values.
+  // Shurikens player have throwed and are currently in air, stores direction (left or right), x and y values.
   this.shurikensInAir = [];
 
   // Animations.
   // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
   this.animationState = 0;
   this.currentFrame = 0;
-  this.animationDirection = animationDirection; // Left or right.
+  this.animationDirection = animationDirection; // "left" or "right".
   this.updateAnimationState = function (state) {
     if (this.animationState != state) {
       this.animationState = state;
@@ -91,7 +91,11 @@ function Player (x, y, animationDirection) {
 
   // Throw shuriken.
   this.throwShuriken = function () {
-    
+    // Make shuriken spawn x and y values.
+    var spawnX = this.x + this.width / 2;
+    var spawnY = this.y + this.height / 3;
+    // Add new shuriken to array.
+    this.shurikensInAir.push([this.animationDirection, spawnX, spawnY]); // Direction, x and y.
   }
 
   // Take damage.
