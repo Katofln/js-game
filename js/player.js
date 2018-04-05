@@ -30,6 +30,7 @@ function Player (x, y, animationDirection) {
   this.tickTimeForDurationOfAttack = 15;
   // Store tick times to next actions.
   this.tickTimeToNextShurikenThrow = 0;
+  this.tickTimeToNewShuriken = 0;
   this.tickTimeToNextAttackAndBlock = 0;
   // Store tick for when action ends.
   this.tickTimeToAttackAndBlockEnd = 0;
@@ -280,8 +281,9 @@ function Player (x, y, animationDirection) {
         this.throwShuriken();
       }
       // Generate new shurikens.
-      if (this.shurikens < this.maxShurikens) {
-
+      if (this.shurikens < this.maxShurikens && Game.currentRenderTick > this.tickTimeToNewShuriken) {
+        console.log("New shuriken.");
+        this.tickTimeToNewShuriken = Game.currentRenderTick + this.tickTimeBetweenNewShurikens;
       }
       /*
         End of shurkens.
