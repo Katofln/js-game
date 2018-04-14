@@ -67,10 +67,13 @@ function Player (x, y, animationDirection) {
       this.currentFrame = 0;
     }
   }
+
   this.idleAnimationFrames = 4;
   this.runningAnimationFrames = 6;
   this.inAirAnimationFrames = 1;
   this.attackingAndBlockingAnimationFrames = 1;
+
+  thus.shruikenAnimationFrames = 5;
 
   // Reset player.
   this.reset = function () {
@@ -98,7 +101,7 @@ function Player (x, y, animationDirection) {
       var spawnX = this.x + this.width / 2;
       var spawnY = this.y + this.height / 3;
       // Add new shuriken to array.
-      this.shurikensInAir.push([this.animationDirection, spawnX, spawnY]); // Direction, x and y.
+      this.shurikensInAir.push([this.animationDirection, spawnX, spawnY, frameCount]); // Direction, x and y, frame count.
 
       this.shurikens--;
       this.tickTimeToNextShurikenThrow = Game.currentRenderTick + this.tickTimeBetweenShurikenThrows;
@@ -106,6 +109,9 @@ function Player (x, y, animationDirection) {
       console.log("Shuriken thrown.");
     }
   }
+
+  // Update shuriken flight.
+  this.
 
   // Take damage.
   this.takeDamage = function (dmg) {
