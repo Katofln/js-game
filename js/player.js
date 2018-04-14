@@ -101,7 +101,7 @@ function Player (x, y, animationDirection) {
       var spawnX = this.x + this.width / 2;
       var spawnY = this.y + this.height / 3;
       // Add new shuriken to array.
-      this.shurikensInAir.push([this.animationDirection, spawnX, spawnY, frameCount]); // Direction, x and y, frame count.
+      this.shurikensInAir.push([this.animationDirection, spawnX, spawnY, 0]); // Direction, x and y, frame count.
 
       this.shurikens--;
       this.tickTimeToNextShurikenThrow = Game.currentRenderTick + this.tickTimeBetweenShurikenThrows;
