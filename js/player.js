@@ -98,7 +98,7 @@ function Player (x, y, animationDirection) {
   this.throwShuriken = function () {
     if (this.shurikens > 0 && Game.currentRenderTick > this.tickTimeToNextShurikenThrow) {
       // Make shuriken spawn x and y values.
-      var spawnX = this.x + this.width / 2;
+      var spawnX = this.x + this.width / 3;
       var spawnY = this.y + this.height / 3;
       // Add new shuriken to array.
       this.shurikensInAir.push([this.animationDirection, spawnX, spawnY, 0]); // Direction, x and y, frame count.
