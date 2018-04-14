@@ -130,12 +130,12 @@ function updateKeyInput() {
   } else {
     player2.jumpKey = false;
   }
-  if (IsKeyDown.dotKey) {
+  if (IsKeyDown.commaKey) {
     player2.attackAndBlockKey = true;
   } else {
     player2.attackAndBlockKey = false;
   }
-  if (IsKeyDown.commaKey) {
+  if (IsKeyDown.dotKey) {
     player2.shurikenKey = true;
   } else {
     player2.shurikenKey = false;
