@@ -92,6 +92,24 @@ Game.render = function () {
   }
   canvasContext.restore();
 
+  // Draw shruikens
+  // Player 1
+  for (var i = 0; i < player1.shurikensInAir.length; i++) {
+    if (player1.shurikensInAir[i][0] == "left") {
+      canvasContext.drawImage(shurikenMovingLeft[player1.shurikensInAir[i][3]], player1.shurikensInAir[i][1], player1.shurikensInAir[i][2]);
+    } else {
+      canvasContext.drawImage(shurikenMovingRight[player1.shurikensInAir[i][3]], player1.shurikensInAir[i][1], player1.shurikensInAir[i][2]);
+    }
+  }
+  // Player 2
+  for (var i = 0; i < player2.shurikensInAir.length; i++) {
+    if (player2.shurikensInAir[i][0] == "left") {
+      canvasContext.drawImage(shurikenMovingLeft[player2.shurikensInAir[i][3]], player2.shurikensInAir[i][1], player2.shurikensInAir[i][2]);
+    } else {
+      canvasContext.drawImage(shurikenMovingRight[player2.shurikensInAir[i][3]], player2.shurikensInAir[i][1], player2.shurikensInAir[i][2]);
+    }
+  }
+
   // Increase the render tick number for time calculation.
   Game.currentRenderTick++;
 }
