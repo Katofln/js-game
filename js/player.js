@@ -287,7 +287,7 @@ function Player (x, y, animationDirection) {
         this.tickTimeToNewShuriken = Game.currentRenderTick + this.tickTimeBetweenNewShurikens;
       }
       /*
-        End of shurkens.
+        End of shurikens.
       */
 
       /*
