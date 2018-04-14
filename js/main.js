@@ -1,5 +1,5 @@
 /*
-  Collision detection with tilemap.
+  Collision detection.
 */
 function isObjectCollidingWithTilemap (objectX, objectY, objectWidth, objectHeight) {
   // Loop though each tile to check if an object is coliding with the tilemap.
