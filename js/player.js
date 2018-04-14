@@ -111,8 +111,8 @@ function Player (x, y, animationDirection) {
   }
 
   // Update shuriken flight.
-  this.updateShurikens {
-    
+  this.updateShurikens = function() {
+
   }
 
   // Take damage.
