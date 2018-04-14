@@ -232,12 +232,12 @@ for (var i = 0; i < 1; i++) {
 
 // Shruikens
 var shurikenMovingLeft = new Array();
-for (var i = 0; i < 4; i++) {
+for (var i = 0; i < 5; i++) {
   shurikenMovingLeft[i] = new Image();
   shurikenMovingLeft[i].src = 'assets/shuriken/movingLeft/' + i + '.png';
 }
 var shurikenMovingRight = new Array();
-for (var i = 0; i < 4; i++) {
+for (var i = 0; i < 5; i++) {
   shurikenMovingRight[i] = new Image();
   shurikenMovingRight[i].src = 'assets/shuriken/movingRight/' + i + '.png';
 }
