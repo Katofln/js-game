@@ -52,7 +52,7 @@ function Player (x, y, animationDirection) {
   // While jumping check if jump key have been released while in air, this is for double jump to work properly.
   this.jumpKeyHaveBeenReleasedInAir = false;
 
-  // Shurikens player have throwed and are currently in air, stores direction (left or right), x and y values.
+  // Shurikens player have throwed and are currently in air, stores direction (left or right), x and y values and frame count.
   this.shurikensInAir = [];
 
   // Animations.
