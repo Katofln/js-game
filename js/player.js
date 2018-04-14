@@ -73,7 +73,7 @@ function Player (x, y, animationDirection) {
   this.inAirAnimationFrames = 1;
   this.attackingAndBlockingAnimationFrames = 1;
 
-  thus.shruikenAnimationFrames = 5;
+  this.shruikenAnimationFrames = 5;
 
   // Reset player.
   this.reset = function () {
