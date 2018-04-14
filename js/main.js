@@ -160,11 +160,13 @@ function isObjectsColliding (obj1x, obj1y, obj1width, obj1height, obj2x, obj2y, 
     return false;
   }
 }
-
 /*
   End collision detection.
 */
 
+/*
+  Sprites and canvas.
+*/
 // Get canvas context.
 var canvas = document.getElementById("gameCanvas");
 var canvasContext = canvas.getContext("2d");
@@ -227,3 +229,6 @@ for (var i = 0; i < 1; i++) {
   blueNinjaAttackingAndBlocking[i] = new Image();
   blueNinjaAttackingAndBlocking[i].src = 'assets/blueNinja/attackingAndBlocking/' + i + '.png';
 }
+/*
+  End sprites and canvas.
+*/
