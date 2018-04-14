@@ -18,5 +18,5 @@ Every time a new round has to be played. Both players have to hold down the atta
 * Left: [Left Arrow Key]
 * Right: [Right Arrow Key]
 * Jump: [Up Arrow Key]
-* Attack/Block: . (Dot Key)
-* Shuriken: , (Comma Key)
+* Attack/Block: , (Comma Key)
+* Shuriken: . (Dot Key)
