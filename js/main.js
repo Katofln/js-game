@@ -229,6 +229,18 @@ for (var i = 0; i < 1; i++) {
   blueNinjaAttackingAndBlocking[i] = new Image();
   blueNinjaAttackingAndBlocking[i].src = 'assets/blueNinja/attackingAndBlocking/' + i + '.png';
 }
+
+// Shruikens
+var shurikenMovingLeft = new Array();
+for (var i = 0; i < 4; i++) {
+  shurikenMovingLeft[i] = new Image();
+  shurikenMovingLeft[i].src = 'assets/shuriken/movingLeft/' + i + '.png';
+}
+var shurikenMovingRight = new Array();
+for (var i = 0; i < 4; i++) {
+  shurikenMovingRight[i] = new Image();
+  shurikenMovingRight[i].src = 'assets/shuriken/movingRight/' + i + '.png';
+}
 /*
   End sprites and canvas.
 */
