@@ -110,8 +110,8 @@ function Player (x, y, animationDirection) {
     }
   }
 
-  // Update shuriken flight.
-  this.updateShurikens = function() {
+  // Update shuriken animations.
+  this.updateShurikenAnimations = function() {
     // Update frame count.
     for (var i = 0; i < this.shurikensInAir.length; i++) {
       if (this.shurikensInAir[i][3] < this.shruikenAnimationFrames - 1) {
@@ -301,7 +301,7 @@ function Player (x, y, animationDirection) {
         this.shurikens++;
         this.tickTimeToNewShuriken = Game.currentRenderTick + this.tickTimeBetweenNewShurikens;
       }
-      this.updateShurikens();
+      this.updateShurikenAnimations();
       /*
         End of shurikens.
       */
