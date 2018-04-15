@@ -4,6 +4,7 @@ Game.update = function () {
 
     player1.update();
     player2.update();
+    updateAllShurikens();
   // If game is not running.
   } else {
 
