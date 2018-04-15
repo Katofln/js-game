@@ -1,6 +1,6 @@
 function updateShurikens (shurikens, targetPlayer) {
   for (var i = 0; i < shurikens.length; i++) {
-    if (isObjectsColliding(shurikens[1], shurikens[2], Game.shurikenWidth, Game.shurikenHeight, targetPlayer.x, targetPlayer.y, targetPlayer.width, targetPlayer.height)) {
+    if (isObjectsColliding(shurikens[i][1], shurikens[i][2], Game.shurikenWidth, Game.shurikenHeight, targetPlayer.x, targetPlayer.y, targetPlayer.width, targetPlayer.height)) {
       console.log("Shuriken collision");
     }
   }
