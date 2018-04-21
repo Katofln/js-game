@@ -1,16 +1,36 @@
 function updateShurikens (player, targetPlayer) {
   for (var i = 0; i < player.shurikensInAir.length; i++) {
+    killThisShuriken = false;
     // Move and check if colliding with tilemap.
-    // Right
-    /*if () {
+    var newX = player.shurikensInAir[i][1];
+    // Left.
+    if (player.shurikensInAir[i][0] == "left") {
+      while (newX > (player.shurikensInAir[i][1] - player.shurikenVelocity)) {
+        newX--;
 
-    // Left
-    } else if () {
+        if (isObjectCollidingWithTilemapLeft(newX, player.shurikensInAir[i][2], Game.shurikenWidth, Game.shurikenHeight) || player.shurikensInAir[i][1].x <= 0) {
+          killThisShuriken = true;
+        }
+      }
+    // Right.
+    } else if (player.shurikensInAir[i][0] == "right") {
+      while (newX < (player.shurikensInAir[i][1] + player.shurikenVelocity)) {
+        newX++;
 
-    }*/
+        if (isObjectCollidingWithTilemapRight(newX, player.shurikensInAir[i][2], Game.shurikenWidth, Game.shurikenHeight) || this.x >= Game.width - Game.shurikenWidth) {
+          killThisShuriken = true;
+        }
+      }
+    }
+
+    player.shurikensInAir[i][1] = newX;
     // Check if colliding with player.
     if (isObjectsColliding(player.shurikensInAir[i][1], player.shurikensInAir[i][2], Game.shurikenWidth, Game.shurikenHeight, targetPlayer.x, targetPlayer.y, targetPlayer.width, targetPlayer.height)) {
       console.log("Shuriken collision");
+      killThisShuriken = true;
+    }
+    if (killThisShuriken) {
+      player.shurikensInAir.splice(i, 1);
     }
   }
 }
