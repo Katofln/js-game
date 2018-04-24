@@ -103,6 +103,11 @@ function Player (x, y, animationDirection) {
     }
   }
 
+  // Player won.
+  this.playerWon = function () {
+    this.wins++;
+  }
+
   // Variable to not let movement update run more than once per frame. This variable is also used for animation.
   this.lastRenderTick = 0;
 
