@@ -89,11 +89,6 @@ function Player (x, y, animationDirection) {
     this.jumpKeyHaveBeenReleasedInAir = false;
   }
 
-  // Attack/block.
-  this.attackAndBlock = function () {
-    console.log("Player attacked/blocked");
-  }
-
   // Take damage.
   this.takeDamage = function (dmg) {
     this.hp -= dmg;
@@ -292,6 +287,16 @@ function Player (x, y, animationDirection) {
       }
       /*
         End of shurikens.
+      */
+
+      /*
+        Player attack/block.
+      */
+      if (this.attackAndBlockKey) {
+        console.log("Player attacked/blocked");
+      }
+      /*
+        End player attack/block.
       */
 
       /*
