@@ -9,7 +9,7 @@ var Game = {
     rounds:0,
     tickTimeForWinScreen:30 * 3,
     tickTimeToWinScreenEnd:0,
-    standardTextColor:"#414141",
+    standardTextColor:"#121212",
     standardTextFont:"Courier New",
     statusBarOpacity:"0.25",
 
