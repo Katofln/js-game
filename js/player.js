@@ -95,7 +95,7 @@ function Player (x, y, animationDirection) {
   }
 
   // Check if player is dead.
-  this.isPlayerDead = function () {
+  this.isDead = function () {
     if (this.hp <= 0) {
       return true;
     } else {
@@ -103,8 +103,8 @@ function Player (x, y, animationDirection) {
     }
   }
 
-  // Player won.
-  this.playerWon = function () {
+  // Player won round.
+  this.roundWon = function () {
     this.wins++;
   }
 
