@@ -9,6 +9,7 @@ var Game = {
     tickTimeForWinScreen:30,
     tickTimeToWinScreenEnd:0,
     standardTextColor:"#414141",
+    standardTextFont:"Courier New";
     statusBarOpacity:"0.25",
 
     player1StartX:50,
