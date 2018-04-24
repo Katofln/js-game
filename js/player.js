@@ -298,7 +298,8 @@ function Player (x, y, animationDirection) {
         Player attack/block.
       */
       if (this.attackAndBlockKey) {
-        console.log("Player attacked/blocked");
+        // TODO
+        //console.log("Player attacked/blocked");
       }
       /*
         End player attack/block.

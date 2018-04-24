@@ -1,8 +1,8 @@
 Game.initialize = function () {
   console.log("Starting new round...");
 
-  player1.reset;
-  player2.reset;
+  player1.reset();
+  player2.reset();
 
   player1.x = Game.player1StartX;
   player1.y = Game.player1StartY;

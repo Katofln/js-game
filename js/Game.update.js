@@ -1,4 +1,12 @@
 Game.update = function () {
+  updateKeyInput();
+
+  // Check ready check.
+  if ((!Game.running && !Game.winScreen) && (player1.attackAndBlockKey && player2.attackAndBlockKey)) {
+    Game.initialize();
+    Game.running = true;
+  }
+
   // Check if one player has won.
   if (Game.running && (player1.isDead() || player2.isDead())) {
     // Set tick time for when win screen ends.
@@ -25,8 +33,6 @@ Game.update = function () {
 
   // Execute if game is running.
   if (Game.running) {
-    updateKeyInput();
-
     player1.update();
     player2.update();
     updateAllShurikens();
