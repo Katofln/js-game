@@ -127,6 +127,7 @@ function Player (x, y, animationDirection) {
     this.hp -= dmg;
   }
 
+  // Check if player is dead.
   this.isPlayerDead = function () {
     if (this.hp <= 0) {
       return true;
