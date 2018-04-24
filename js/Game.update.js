@@ -15,6 +15,7 @@ Game.update = function () {
     // Stop game and display win screen.
     Game.running = false;
     Game.winScreen = true;
+    Game.rounds++;
   }
 
   // Check if not on win screen anymore.

@@ -6,6 +6,7 @@ var Game = {
     running:true,
     winScreen:false,
     lastWinner:null,  //Takes "1" and "2" as input.
+    rounds:0,
     tickTimeForWinScreen:30,
     tickTimeToWinScreenEnd:0,
     standardTextColor:"#414141",
