@@ -105,8 +105,6 @@ function Player (x, y, animationDirection) {
 
       this.shurikens--;
       this.tickTimeToNextShurikenThrow = Game.currentRenderTick + this.tickTimeBetweenShurikenThrows;
-
-      console.log("Shuriken thrown.");
     }
   }
 
@@ -298,7 +296,6 @@ function Player (x, y, animationDirection) {
       }
       // Generate new shurikens.
       if (this.shurikens < this.maxShurikens && Game.currentRenderTick > this.tickTimeToNewShuriken) {
-        console.log("New shuriken.");
         this.shurikens++;
         this.tickTimeToNewShuriken = Game.currentRenderTick + this.tickTimeBetweenNewShurikens;
       }
