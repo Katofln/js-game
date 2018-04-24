@@ -6,6 +6,7 @@ var Game = {
     running:true,
     winScreen:false,
     standardTextColor:"#414141",
+    statusBarOpacity:"0.25",
 
     player1StartX:50,
     player1StartY:672,
