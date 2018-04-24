@@ -5,6 +5,8 @@ var Game = {
     height:768,
     running:true,
     winScreen:false,
+    tickTimeForWinScreen:30,
+    tickTimeToWinScreenEnd:0,
     standardTextColor:"#414141",
     statusBarOpacity:"0.25",
 

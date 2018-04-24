@@ -1,5 +1,5 @@
 Game.update = function () {
-  if (Game.running) {
+  if (Game.running && !Game.winScreen) {
     updateKeyInput();
 
     player1.update();
