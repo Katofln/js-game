@@ -35,10 +35,11 @@ Game.render = function () {
     }
   }
 
-  // Check if game is NOT running and NOT on win screen.
+  // Draw screen info.
   if (!Game.running && !Game.winScreen) {
-    // Print that players need to ready up.
     drawPlayersNeedToReadyUp();
+  } else if (Game.winScreen) {
+    drawPlayerXWon(Game.lastWinner);
   }
 
   // Draw players.
