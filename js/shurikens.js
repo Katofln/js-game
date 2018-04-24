@@ -26,7 +26,7 @@ function updateShurikens (player, targetPlayer) {
     player.shurikensInAir[i][1] = newX;
     // Check if colliding with player.
     if (isObjectsColliding(player.shurikensInAir[i][1], player.shurikensInAir[i][2], Game.shurikenWidth, Game.shurikenHeight, targetPlayer.x, targetPlayer.y, targetPlayer.width, targetPlayer.height)) {
-      console.log("Shuriken collision");
+      targetPlayer.takeDamage(player.shurikenDamage);
       killThisShuriken = true;
     }
     if (killThisShuriken) {
