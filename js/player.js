@@ -17,8 +17,8 @@ function Player (x, y, animationDirection) {
   this.shurikenVelocity = 25;
 
   // Standard attack points for player.
-  this.shurikenDamage = 10;
-  this.meleeDamage = 10;
+  this.shurikenDamage = 25;
+  this.meleeDamage = 35;
   this.maxShurikens = 3; // Max Shurikens player can have in hand.
   this.shurikens = this.maxShurikens; // Shurikens player currently have in hand.
   // If player currently attacking or blocking.
