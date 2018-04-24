@@ -5,6 +5,7 @@ var Game = {
     height:768,
     running:true,
     winScreen:false,
+    lastWinner:null,  //Takes "1" and "2" as input.
     tickTimeForWinScreen:30,
     tickTimeToWinScreenEnd:0,
     standardTextColor:"#414141",
