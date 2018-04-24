@@ -108,18 +108,6 @@ function Player (x, y, animationDirection) {
     }
   }
 
-  // Update shuriken animations.
-  this.updateShurikenAnimations = function() {
-    // Update frame count.
-    for (var i = 0; i < this.shurikensInAir.length; i++) {
-      if (this.shurikensInAir[i][3] < this.shruikenAnimationFrames - 1) {
-        this.shurikensInAir[i][3]++;
-      } else {
-        this.shurikensInAir[i][3] = 0;
-      }
-    }
-  }
-
   // Take damage.
   this.takeDamage = function (dmg) {
     this.hp -= dmg;
@@ -299,7 +287,14 @@ function Player (x, y, animationDirection) {
         this.shurikens++;
         this.tickTimeToNewShuriken = Game.currentRenderTick + this.tickTimeBetweenNewShurikens;
       }
-      this.updateShurikenAnimations();
+      // Update frame count.
+      for (var i = 0; i < this.shurikensInAir.length; i++) {
+        if (this.shurikensInAir[i][3] < this.shruikenAnimationFrames - 1) {
+          this.shurikensInAir[i][3]++;
+        } else {
+          this.shurikensInAir[i][3] = 0;
+        }
+      }
       /*
         End of shurikens.
       */
