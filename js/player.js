@@ -94,7 +94,7 @@ function Player (x, y, animationDirection) {
     console.log("Player attacked/blocked");
   }
 
-  // Throw shuriken.
+  /*// Throw shuriken.
   this.throwShuriken = function () {
     if (this.shurikens > 0 && Game.currentRenderTick > this.tickTimeToNextShurikenThrow) {
       // Make shuriken spawn x and y values.
@@ -106,7 +106,7 @@ function Player (x, y, animationDirection) {
       this.shurikens--;
       this.tickTimeToNextShurikenThrow = Game.currentRenderTick + this.tickTimeBetweenShurikenThrows;
     }
-  }
+  }*/
 
   // Take damage.
   this.takeDamage = function (dmg) {
@@ -280,7 +280,16 @@ function Player (x, y, animationDirection) {
       */
       // Check if shurken is thrown and add it to the list of shurikens in air.
       if (this.shurikenKey) {
-        this.throwShuriken();
+        if (this.shurikens > 0 && Game.currentRenderTick > this.tickTimeToNextShurikenThrow) {
+          // Make shuriken spawn x and y values.
+          var spawnX = this.x + this.width / 3;
+          var spawnY = this.y + this.height / 3;
+          // Add new shuriken to array.
+          this.shurikensInAir.push([this.animationDirection, spawnX, spawnY, 0]); // Direction, x and y, frame count.
+
+          this.shurikens--;
+          this.tickTimeToNextShurikenThrow = Game.currentRenderTick + this.tickTimeBetweenShurikenThrows;
+        }
       }
       // Generate new shurikens.
       if (this.shurikens < this.maxShurikens && Game.currentRenderTick > this.tickTimeToNewShuriken) {
