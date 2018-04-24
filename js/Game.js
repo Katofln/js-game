@@ -7,7 +7,7 @@ var Game = {
     winScreen:false,
     lastWinner:null,  //Takes "1" and "2" as input.
     rounds:0,
-    tickTimeForWinScreen:30,
+    tickTimeForWinScreen:30 * 3,
     tickTimeToWinScreenEnd:0,
     standardTextColor:"#414141",
     standardTextFont:"Courier New",
