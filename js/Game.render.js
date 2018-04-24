@@ -38,10 +38,7 @@ Game.render = function () {
   // Check if game is NOT running and NOT on win screen.
   if (!Game.running && !Game.winScreen) {
     // Print that players need to ready up.
-    canvasContext.font = '30px Courier New';
-    canvasContext.textAlign = 'center';
-    canvasContext.fillStyle = Game.standardTextColor;
-    canvasContext.fillText("Hold attack/block key to accept ready check.", Game.width/2, Game.height/2);
+    drawPlayersNeedToReadyUp();
   }
 
   // Draw players.
