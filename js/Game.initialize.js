@@ -1,5 +1,5 @@
 Game.initialize = function () {
-  console.log("Starting new game...");
+  console.log("Starting new round...");
 
   player1.reset;
   player2.reset;
