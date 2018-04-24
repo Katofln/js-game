@@ -10,7 +10,7 @@ var Game = {
     tickTimeForWinScreen:30 * 3,
     tickTimeToWinScreenEnd:0,
     standardTextColor:"#121212",
-    standardTextFont:"Courier New",
+    standardTextFont:"Arial",
     statusBarOpacity:"0.25",
 
     player1StartX:50,
