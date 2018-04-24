@@ -3,7 +3,7 @@ var Game = {
     currentRenderTick:0,
     width:1024,
     height:768,
-    running:true,
+    running:true, // TODO: Needs to be off by default.
     winScreen:false,
     lastWinner:null,  //Takes "1" and "2" as input.
     rounds:0,
