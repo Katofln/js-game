@@ -16,19 +16,23 @@ function drawPlayerStatus () {
     return lengthOfHPBar / 100 * playerHP;
   }
 
-  // Player 1
+  canvasContext.globalAlpha = Game.statusBarOpacity;
 
+  // Player 1
   canvasContext.fillStyle = lostHPColor;
   canvasContext.fillRect(pixelsFromSides, pixelsFromTop, lengthOfHPBar, heightOfHPBar);
 
   canvasContext.fillStyle = HPColor;
   canvasContext.fillRect(pixelsFromSides, pixelsFromTop, lengthOfHPBarBack(player1), heightOfHPBar);
+
   // Player 2
   canvasContext.fillStyle = lostHPColor;
   canvasContext.fillRect(Game.width - lengthOfHPBar - pixelsFromSides, pixelsFromTop, lengthOfHPBar, heightOfHPBar);
 
   canvasContext.fillStyle = HPColor;
   canvasContext.fillRect(Game.width - lengthOfHPBar - pixelsFromSides, pixelsFromTop, lengthOfHPBarBack(player2), heightOfHPBar);
+
+  canvasContext.globalAlpha = 1;
 }
 
 function drawPlayerXWon (player) { // Takes input: "1" and "2".

@@ -11,7 +11,7 @@ var Game = {
     tickTimeToWinScreenEnd:0,
     standardTextColor:"#121212",
     standardTextFont:"Arial",
-    statusBarOpacity:"0.25",
+    statusBarOpacity:"0.75",
 
     player1StartX:50,
     player1StartY:672,
