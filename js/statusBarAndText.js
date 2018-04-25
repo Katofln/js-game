@@ -13,9 +13,11 @@ function drawPlayerStatus () {
 
   function lengthOfHPBarBack (player) {
     var playerHP = player.hp;
-    // Keep HP bar at max 100.
+    // Keep HP bar at max 100 and min 0.
     if (playerHP > 100) {
       playerHP = 100;
+    } else if (playerHP < 0) {
+      playerHP = 0;
     }
     return lengthOfHPBar / 100 * playerHP;
   }
