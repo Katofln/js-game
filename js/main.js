@@ -251,6 +251,9 @@ for (var i = 0; i < 5; i++) {
   shurikenMovingRight[i] = new Image();
   shurikenMovingRight[i].src = 'assets/shuriken/movingRight/' + i + '.png';
 }
+// For ready check screen.
+JSNinjaLogo = new Image();
+JSNinjaLogo.src = 'assets/JSNinjaLogo.png';
 /*
   End sprites and canvas.
 */
