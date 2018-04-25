@@ -93,6 +93,7 @@ function drawPlayersNeedToReadyUp () {
   // Draw other things on screen.
   canvasContext.drawImage(JSNinjaLogo, Game.width/2 - 250, 150);
   canvasContext.font = "27px " + Game.standardTextFont;
+
   canvasContext.textAlign = "left";
   canvasContext.fillStyle = "#000000";
   canvasContext.fillText('Game by Frederik Stroem', 100, Game.height - 150);
@@ -105,4 +106,6 @@ function drawPlayersNeedToReadyUp () {
   canvasContext.font = "15px " + Game.standardTextFont;
   canvasContext.fillText(gameVersion, 2, Game.height - 2);
 
+  // Third party credits.
+  canvasContext.drawImage(thirdPartyCredits, Game.width - 300, Game.height - 300);
 }
