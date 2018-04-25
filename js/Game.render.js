@@ -42,6 +42,9 @@ Game.render = function () {
     drawPlayerXWon(Game.lastWinner);
   }
 
+  // Draw player status bar.
+  drawPlayerStatus();
+
   // Draw players.
   // Player 1.
   canvasContext.save();

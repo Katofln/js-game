@@ -1,5 +1,11 @@
-function drawPlayerStatus (player, drawSide) {  // Draw side takes "left" or "right", means which side/player status is drawn for.
-
+function drawPlayerStatus () {
+  var pixelsFromSides = "50px";
+  var pixelsFromTop = "50px";
+  var pixelsFromHPBarToShurikens = "20px";
+  var lengthOfHPBar = "100px";
+  var heightOfHPBar = "20px";
+  var HPColor = "#00ff00";
+  var lostHPColor = "#ff0000";
 }
 
 function drawPlayerXWon (player) { // Takes input: "1" and "2".
