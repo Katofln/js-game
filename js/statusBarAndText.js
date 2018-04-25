@@ -98,5 +98,8 @@ function drawPlayersNeedToReadyUp () {
   canvasContext.fillText('Game by Frederik Stroem', 100, Game.height - 150);
   canvasContext.font = "14px " + Game.standardTextFont;
   canvasContext.fillText('@frederikstroem, @frederikhstroem & @katofln', 100, Game.height - 135);
+  canvasContext.fillStyle = "#373737";
+  canvasContext.font = "12px " + Game.standardTextFont;
+  canvasContext.fillText('frederikstroem.com', 100, Game.height - 120);
 
 }
