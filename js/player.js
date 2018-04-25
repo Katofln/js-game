@@ -19,15 +19,15 @@ function Player (x, y, animationDirection) {
   // Standard attack points for player.
   this.shurikenDamage = 25;
   this.meleeDamage = 35;
-  this.maxShurikens = 3; // Max Shurikens player can have in hand.
+  this.maxShurikens = 5; // Max Shurikens player can have in hand.
   this.shurikens = this.maxShurikens; // Shurikens player currently have in hand.
   // If player currently attacking or blocking.
   this.attackingAndBlocking = false;
   // Stores tick values for attacking/blocking and throwing shurikens.
-  this.tickTimeBetweenShurikenThrows = 30;
+  this.tickTimeBetweenShurikenThrows = 30 / 2;
   this.tickTimeBetweenNewShurikens = 30 * 5;
   this.tickTimeBetweenAttackAndBlocks = 30;
-  this.tickTimeForDurationOfAttack = 15;
+  this.tickTimeForDurationOfAttack = 30 / 2;
   // Store tick times to next actions.
   this.tickTimeToNextShurikenThrow = 0;
   this.tickTimeToNewShuriken = 0;
