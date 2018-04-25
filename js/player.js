@@ -272,7 +272,12 @@ function Player (x, y, animationDirection) {
           var spawnY = this.y + this.height / 3;
           // Add new shuriken to array.
           this.shurikensInAir.push([this.animationDirection, spawnX, spawnY, 0]); // Direction, x and y, frame count.
+          // Reset shruiken time to next new shruiken if player has max shurikens, else the player can have a extra shuriken over max.
+          if (this.shurikens == this.maxShurikens) {
+            this.tickTimeToNewShuriken = Game.currentRenderTick + this.tickTimeBetweenNewShurikens;
+          }
 
+          // Decrease shurikens.
           this.shurikens--;
           this.tickTimeToNextShurikenThrow = Game.currentRenderTick + this.tickTimeBetweenShurikenThrows;
         }
