@@ -1,4 +1,4 @@
-# 3RD-PARTYS-USED
+# Asset Sources
 This page links and credits all game art, music and so on other creaters have made that are used in this game.
 ## Art
 ### Ninja [Animated]
