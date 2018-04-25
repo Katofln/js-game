@@ -1,11 +1,15 @@
 function drawPlayerStatus () {
-  var pixelsFromSides = "20";
-  var pixelsFromTop = "25";
-  var pixelsFromHPBarToShurikens = "20";
-  var lengthOfHPBar = "100";
-  var heightOfHPBar = "20";
+  var pixelsFromSides = 20;
+  var pixelsFromTop = 25; // This is only for health bar and shurikens, not text.
+  var textPixelsFromTop = 20;
+  var pixelsFromHPBarToShurikens = 20;
+  var lengthOfHPBar = 100;
+  var heightOfHPBar = 20;
   var HPColor = "#00ff00";
   var lostHPColor = "#ff0000";
+
+  canvasContext.font = "15px " + Game.standardTextFont;
+  canvasContext.textAlign = "center";
 
   function lengthOfHPBarBack (player) {
     var playerHP = player.hp;
@@ -25,12 +29,17 @@ function drawPlayerStatus () {
   canvasContext.fillStyle = HPColor;
   canvasContext.fillRect(pixelsFromSides, pixelsFromTop, lengthOfHPBarBack(player1), heightOfHPBar);
 
+  canvasContext.fillStyle = Game.standardTextColor;
+  canvasContext.fillText(player1.hp, pixelsFromSides + (lengthOfHPBar / 2), textPixelsFromTop);
   // Player 2
   canvasContext.fillStyle = lostHPColor;
   canvasContext.fillRect(Game.width - lengthOfHPBar - pixelsFromSides, pixelsFromTop, lengthOfHPBar, heightOfHPBar);
 
   canvasContext.fillStyle = HPColor;
   canvasContext.fillRect(Game.width - lengthOfHPBar - pixelsFromSides, pixelsFromTop, lengthOfHPBarBack(player2), heightOfHPBar);
+
+  canvasContext.fillStyle = Game.standardTextColor;
+  canvasContext.fillText(player2.hp, Game.width - (pixelsFromSides + (lengthOfHPBar / 2)), textPixelsFromTop);
 
   canvasContext.globalAlpha = 1;
 }
