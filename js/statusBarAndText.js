@@ -3,6 +3,7 @@ function drawPlayerStatus () {
   var pixelsFromTop = 25; // This is only for health bar and shurikens, not text.
   var textPixelsFromTop = 20;
   var pixelsFromHPBarToShurikens = 20;
+  var pixelsBetweenShurikens = 5;
   var lengthOfHPBar = 100;
   var heightOfHPBar = 20;
   var HPColor = "#00ff00";
@@ -33,6 +34,10 @@ function drawPlayerStatus () {
 
   canvasContext.fillStyle = Game.standardTextColor;
   canvasContext.fillText(player1.hp, pixelsFromSides + (lengthOfHPBar / 2), textPixelsFromTop);
+
+  for (var i = 0; i < player1.shurikens; i++) {
+    canvasContext.drawImage(redNinjaStatusBarShuriken[0], pixelsFromSides + i * (pixelsBetweenShurikens + Game.shurikenWidth), pixelsFromTop + pixelsFromHPBarToShurikens);
+  }
   // Player 2
   canvasContext.fillStyle = lostHPColor;
   canvasContext.fillRect(Game.width - lengthOfHPBar - pixelsFromSides, pixelsFromTop, lengthOfHPBar, heightOfHPBar);
@@ -42,6 +47,10 @@ function drawPlayerStatus () {
 
   canvasContext.fillStyle = Game.standardTextColor;
   canvasContext.fillText(player2.hp, Game.width - (pixelsFromSides + (lengthOfHPBar / 2)), textPixelsFromTop);
+
+  for (var i = 0; i < player2.shurikens; i++) {
+    canvasContext.drawImage(blueNinjaStatusBarShuriken[0], Game.width - lengthOfHPBar - (pixelsFromSides - i * (pixelsBetweenShurikens + Game.shurikenWidth)), pixelsFromTop + pixelsFromHPBarToShurikens);
+  }
 
   canvasContext.globalAlpha = 1;
 }
