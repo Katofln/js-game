@@ -12,7 +12,7 @@ function Player (x, y, animationDirection) {
   this.yVelocity = 0;
   this.maxYVelocity = 100;
   this.moveVelocity = 15;
-  this.jumpVelocity = -20;
+  this.jumpVelocity = 20;
 
   this.shurikenVelocity = 30;
 
@@ -183,7 +183,7 @@ function Player (x, y, animationDirection) {
       if (this.jumpKey) {
         // Check if player is able to jump.
         if (isObjectCollidingWithTilemapDown(this.x, this.y, this.width, this.height) || (this.jumpKeyHaveBeenReleasedInAir && this.timesJumped < this.maxJumpTimes)) {
-          this.yVelocity = this.jumpVelocity;
+          this.yVelocity = 0 - this.jumpVelocity;
           this.timesJumped++;
           this.jumpKeyHaveBeenReleasedInAir = false;
         }
