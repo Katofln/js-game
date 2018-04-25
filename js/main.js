@@ -207,6 +207,11 @@ for (var i = 0; i < 1; i++) {
   redNinjaAttackingAndBlocking[i] = new Image();
   redNinjaAttackingAndBlocking[i].src = 'assets/redNinja/attackingAndBlocking/' + i + '.png';
 }
+var redNinjaTakingDamage = new Array();
+for (var i = 0; i < 1; i++) {
+  redNinjaTakingDamage[i] = new Image();
+  redNinjaTakingDamage[i].src = 'assets/redNinja/takingDamage/' + i + '.png';
+}
 var redNinjaStatusBarShuriken = new Array();
 for (var i = 0; i < 1; i++) {
   redNinjaStatusBarShuriken[i] = new Image();
@@ -233,6 +238,11 @@ var blueNinjaAttackingAndBlocking = new Array();
 for (var i = 0; i < 1; i++) {
   blueNinjaAttackingAndBlocking[i] = new Image();
   blueNinjaAttackingAndBlocking[i].src = 'assets/blueNinja/attackingAndBlocking/' + i + '.png';
+}
+var blueNinjaTakingDamage = new Array();
+for (var i = 0; i < 1; i++) {
+  blueNinjaTakingDamage[i] = new Image();
+  blueNinjaTakingDamage[i].src = 'assets/blueNinja/takingDamage/' + i + '.png';
 }
 var blueNinjaStatusBarShuriken = new Array();
 for (var i = 0; i < 1; i++) {
