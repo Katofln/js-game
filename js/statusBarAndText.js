@@ -3,7 +3,7 @@ function drawPlayerStatus () {
   var pixelsFromTop = 25; // This is only for health bar and shurikens, not text.
   var textPixelsFromTop = 20;
   var pixelsFromHPBarToShurikens = 20;
-  var pixelsBetweenShurikens = 5;
+  var pixelsBetweenShurikens = -6.5;
   var lengthOfHPBar = 100;
   var heightOfHPBar = 20;
   var HPColor = "#00ff00";
