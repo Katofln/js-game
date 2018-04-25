@@ -207,6 +207,11 @@ for (var i = 0; i < 1; i++) {
   redNinjaAttackingAndBlocking[i] = new Image();
   redNinjaAttackingAndBlocking[i].src = 'assets/redNinja/attackingAndBlocking/' + i + '.png';
 }
+var redNinjaStatusBarShuriken = new Array();
+for (var i = 0; i < 1; i++) {
+  redNinjaStatusBarShuriken[i] = new Image();
+  redNinjaStatusBarShuriken[i].src = 'assets/redNinja/statusBarShuriken/' + i + '.png';
+}
 
 // Player 2
 var blueNinjaIdle = new Array();
@@ -228,6 +233,11 @@ var blueNinjaAttackingAndBlocking = new Array();
 for (var i = 0; i < 1; i++) {
   blueNinjaAttackingAndBlocking[i] = new Image();
   blueNinjaAttackingAndBlocking[i].src = 'assets/blueNinja/attackingAndBlocking/' + i + '.png';
+}
+var blueNinjaStatusBarShuriken = new Array();
+for (var i = 0; i < 1; i++) {
+  blueNinjaStatusBarShuriken[i] = new Image();
+  blueNinjaStatusBarShuriken[i].src = 'assets/blueNinja/statusBarShuriken/' + i + '.png';
 }
 
 // Shruikens
