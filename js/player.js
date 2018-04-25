@@ -28,12 +28,15 @@ function Player (x, y, animationDirection) {
   this.tickTimeBetweenNewShurikens = 30 * 3;
   this.tickTimeBetweenAttackAndBlocks = 30;
   this.tickTimeForDurationOfAttack = 30 / 2;
+  // Tick time for action.
+  this.tickTimeForTakingDamageAnimation = 30 / 3;
   // Store tick times to next actions.
   this.tickTimeToNextShurikenThrow = 0;
   this.tickTimeToNewShuriken = this.tickTimeBetweenNewShurikens;
   this.tickTimeToNextAttackAndBlock = 0;
   // Store tick for when action ends.
   this.tickTimeToAttackAndBlockEnd = 0;
+  this.tickTimeToTakingDamageAnimationEnds = 0;
 
   // Other.
   this.hp = 100;
@@ -56,7 +59,7 @@ function Player (x, y, animationDirection) {
   this.shurikensInAir = [];
 
   // Animations.
-  // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
+  // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking, 4-taking damage.
   this.animationState = 0;
   this.currentFrame = 0;
   this.animationDirection = animationDirection; // "left" or "right".
@@ -72,6 +75,7 @@ function Player (x, y, animationDirection) {
   this.runningAnimationFrames = 6;
   this.inAirAnimationFrames = 1;
   this.attackingAndBlockingAnimationFrames = 1;
+  this.takingDamageAnimationFrames = 1;
 
   this.shruikenAnimationFrames = 5;
 
@@ -96,6 +100,7 @@ function Player (x, y, animationDirection) {
   // Take damage.
   this.takeDamage = function (dmg) {
     this.hp -= dmg;
+    this.tickTimeToTakingDamageAnimationEnds = Game.currentRenderTick + this.tickTimeForTakingDamageAnimation;
   }
 
   // Check if player is dead.
@@ -121,7 +126,7 @@ function Player (x, y, animationDirection) {
       /*
         Increase animation frames.
       */
-      // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
+      // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking, 4-taking damage.
       switch (this.animationState) {
         case 0:
         if (Game.currentRenderTick % 5 == 0) { // This is to slow down animation.
@@ -148,6 +153,13 @@ function Player (x, y, animationDirection) {
           break;
         case 3:
           if (this.currentFrame < this.attackingAndBlockingAnimationFrames - 1) {
+            this.currentFrame++;
+          } else {
+            this.currentFrame = 0;
+          }
+          break;
+        case 4:
+          if (this.currentFrame < this.takingDamageAnimationFrames - 1) {
             this.currentFrame++;
           } else {
             this.currentFrame = 0;
@@ -318,8 +330,11 @@ function Player (x, y, animationDirection) {
         Update animation states.
       */
       // Animation states: 0-idle, 1-running, 2-in air, 3-attacking/blocking.
+      // Player taking damage.
+      if (this.tickTimeToTakingDamageAnimationEnds > Game.currentRenderTick) {
+        this.updateAnimationState(4);
       // Player attacking or blocking.
-      if (this.attackingAndBlocking) {
+      } else if (this.attackingAndBlocking) {
         this.updateAnimationState(3);
       // Player in air.
       } else if (this.yVelocity != 0) {

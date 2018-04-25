@@ -67,6 +67,9 @@ Game.render = function () {
     case 3:
       canvasContext.drawImage(redNinjaAttackingAndBlocking[player1.currentFrame], 0, 0);
       break;
+    case 4:
+      canvasContext.drawImage(redNinjaTakingDamage[player1.currentFrame], 0, 0);
+      break;
   }
   canvasContext.restore();
   // Player 2.
@@ -89,6 +92,9 @@ Game.render = function () {
       break;
     case 3:
       canvasContext.drawImage(blueNinjaAttackingAndBlocking[player2.currentFrame], 0, 0);
+      break;
+    case 4:
+      canvasContext.drawImage(blueNinjaTakingDamage[player2.currentFrame], 0, 0);
       break;
   }
   canvasContext.restore();
