@@ -1,11 +1,34 @@
 function drawPlayerStatus () {
-  var pixelsFromSides = "50px";
-  var pixelsFromTop = "50px";
-  var pixelsFromHPBarToShurikens = "20px";
-  var lengthOfHPBar = "100px";
-  var heightOfHPBar = "20px";
+  var pixelsFromSides = "20";
+  var pixelsFromTop = "25";
+  var pixelsFromHPBarToShurikens = "20";
+  var lengthOfHPBar = "100";
+  var heightOfHPBar = "20";
   var HPColor = "#00ff00";
   var lostHPColor = "#ff0000";
+
+  function lengthOfHPBarBack (player) {
+    var playerHP = player.hp;
+    // Keep HP bar at max 100.
+    if (playerHP > 100) {
+      playerHP = 100;
+    }
+    return lengthOfHPBar / 100 * playerHP;
+  }
+
+  // Player 1
+
+  canvasContext.fillStyle = lostHPColor;
+  canvasContext.fillRect(pixelsFromSides, pixelsFromTop, lengthOfHPBar, heightOfHPBar);
+
+  canvasContext.fillStyle = HPColor;
+  canvasContext.fillRect(pixelsFromSides, pixelsFromTop, lengthOfHPBarBack(player1), heightOfHPBar);
+  // Player 2
+  canvasContext.fillStyle = lostHPColor;
+  canvasContext.fillRect(Game.width - lengthOfHPBar - pixelsFromSides, pixelsFromTop, lengthOfHPBar, heightOfHPBar);
+
+  canvasContext.fillStyle = HPColor;
+  canvasContext.fillRect(Game.width - lengthOfHPBar - pixelsFromSides, pixelsFromTop, lengthOfHPBarBack(player2), heightOfHPBar);
 }
 
 function drawPlayerXWon (player) { // Takes input: "1" and "2".
