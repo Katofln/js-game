@@ -2,7 +2,7 @@ Game.update = function () {
   updateKeyInput();
 
   // Check ready check.
-  if ((!Game.running && !Game.winScreen) && (player1.attackAndBlockKey && player2.attackAndBlockKey)) {
+  if ((!Game.running && !Game.winScreen) && (player1.shurikenKey && player2.shurikenKey)) {
     Game.initialize();
     Game.running = true;
   }
