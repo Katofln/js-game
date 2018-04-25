@@ -101,5 +101,8 @@ function drawPlayersNeedToReadyUp () {
   canvasContext.fillStyle = "#373737";
   canvasContext.font = "12px " + Game.standardTextFont;
   canvasContext.fillText('frederikstroem.com', 100, Game.height - 120);
+  canvasContext.fillStyle = "#000000";
+  canvasContext.font = "15px " + Game.standardTextFont;
+  canvasContext.fillText(gameVersion, 2, Game.height - 2);
 
 }
