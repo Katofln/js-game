@@ -23,5 +23,5 @@ function drawPlayersNeedToReadyUp () {
   canvasContext.font = "34px " + Game.standardTextFont;
   canvasContext.textAlign = "center";
   canvasContext.fillStyle = Game.standardTextColor;
-  canvasContext.fillText("Hold attack/block key to accept ready check.", Game.width/2, Game.height/2);
+  canvasContext.fillText('Hold shuriken key to accept ready check (v + .)', Game.width/2, Game.height/2);
 }
