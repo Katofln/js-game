@@ -3,10 +3,20 @@ function drawPlayerStatus (player, drawSide) {  // Draw side takes "left" or "ri
 }
 
 function drawPlayerXWon (player) { // Takes input: "1" and "2".
-  canvasContext.font = "37px " + Game.standardTextFont;
+  var playerWonColor = null;
+  var winColor = null;
+  if (player == 1) {
+    playerWonColor = "Red";
+    winColor = "#cd0000";
+  } else if (player == 2) {
+    playerWonColor = "Blue";
+    winColor = "#0000cd";
+  }
+
+  canvasContext.font = "90px " + Game.standardTextFont;
   canvasContext.textAlign = "center";
-  canvasContext.fillStyle = Game.standardTextColor;
-  canvasContext.fillText("Player " + player + " won round " + Game.rounds + "!", Game.width/2, Game.height/2);
+  canvasContext.fillStyle = winColor;
+  canvasContext.fillText(playerWonColor + " Wins!", Game.width/2, Game.height/2);
 }
 
 function drawPlayersNeedToReadyUp () {
