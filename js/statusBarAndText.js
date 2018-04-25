@@ -92,4 +92,11 @@ function drawPlayersNeedToReadyUp () {
 
   // Draw other things on screen.
   canvasContext.drawImage(JSNinjaLogo, Game.width/2 - 250, 150);
+  canvasContext.font = "27px " + Game.standardTextFont;
+  canvasContext.textAlign = "left";
+  canvasContext.fillStyle = "#000000";
+  canvasContext.fillText('Game by Frederik Stroem', 100, Game.height - 150);
+  canvasContext.font = "14px " + Game.standardTextFont;
+  canvasContext.fillText('@frederikstroem, @frederikhstroem & @katofln', 100, Game.height - 135);
+
 }
