@@ -24,7 +24,7 @@ function Player (x, y, animationDirection) {
   // If player currently attacking or blocking.
   this.attackingAndBlocking = false;
   // Stores tick values for attacking/blocking and throwing shurikens.
-  this.tickTimeBetweenShurikenThrows = 30 / 2;
+  this.tickTimeBetweenShurikenThrows = 30;
   this.tickTimeBetweenNewShurikens = 30 * 3;
   this.tickTimeBetweenAttackAndBlocks = 30;
   this.tickTimeForDurationOfAttack = 30 / 2;
