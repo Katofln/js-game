@@ -100,7 +100,7 @@ function drawPlayersNeedToReadyUp () {
   // Draw which keys to hold down.
   canvasContext.font = "20px " + Game.standardTextFont;
   canvasContext.fillStyle = Game.standardTextColor;
-  canvasContext.fillText('Keys: v + .', Game.width/2, Game.height/2 + 30);
+  canvasContext.fillText('Keys: 1 + .', Game.width/2, Game.height/2 + 30);
 
   // Draw other things on screen.
   canvasContext.drawImage(JSNinjaLogo, Game.width/2 - 250, 150);

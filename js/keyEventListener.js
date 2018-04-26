@@ -5,7 +5,7 @@ var IsKeyDown = {
   dKey:false,
   wKey:false,
   cKey:false,   // Attack/block.
-  vKey:false,   // Shuriken.
+  oneKey:false,   // Shuriken.
 
   // Player 2.
   leftKey:false,
@@ -46,8 +46,8 @@ document.addEventListener('keydown', function(event) {
     case 67:
       IsKeyDown.cKey = true;
       break;
-    case 86:
-      IsKeyDown.vKey = true;
+    case 49:
+      IsKeyDown.oneKey = true;
   }
 });
 
@@ -81,8 +81,8 @@ document.addEventListener('keyup', function(event) {
     case 67:
       IsKeyDown.cKey = false;
       break;
-    case 86:
-      IsKeyDown.vKey = false;
+    case 49:
+      IsKeyDown.oneKey = false;
   }
 });
 
@@ -108,7 +108,7 @@ function updateKeyInput() {
   } else {
     player1.attackAndBlockKey = false;
   }
-  if (IsKeyDown.vKey) {
+  if (IsKeyDown.oneKey) {
     player1.shurikenKey = true;
   } else {
     player1.shurikenKey = false;
