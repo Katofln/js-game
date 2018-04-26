@@ -92,6 +92,7 @@ function Player (x, y, animationDirection) {
     this.timesJumped = 0;
     this.jumpKeyHaveBeenReleasedInAir = false;
 
+    this.shurikensInAir = [];
     this.tickTimeToNewShuriken = Game.currentRenderTick + this.tickTimeBetweenNewShurikens;
     this.shurikens = 0;
     this.tickTimeToNextShurikenThrow = 0;
