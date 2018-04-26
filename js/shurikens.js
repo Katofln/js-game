@@ -8,7 +8,7 @@ function updateShurikens (player, targetPlayer) {
       while (newX > (player.shurikensInAir[i][1] - player.shurikenVelocity)) {
         newX--;
 
-        if (isObjectCollidingWithTilemapLeft(newX, player.shurikensInAir[i][2], Game.shurikenWidth, Game.shurikenHeight) || player.shurikensInAir[i][1].x <= 0) {
+        if (isObjectCollidingWithTilemapLeft(newX, player.shurikensInAir[i][2], Game.shurikenWidth, Game.shurikenHeight) || player.shurikensInAir[i][1] <= 0) {
           killThisShuriken = true;
         }
       }
@@ -17,7 +17,7 @@ function updateShurikens (player, targetPlayer) {
       while (newX < (player.shurikensInAir[i][1] + player.shurikenVelocity)) {
         newX++;
 
-        if (isObjectCollidingWithTilemapRight(newX, player.shurikensInAir[i][2], Game.shurikenWidth, Game.shurikenHeight) || this.x >= Game.width - Game.shurikenWidth) {
+        if (isObjectCollidingWithTilemapRight(newX, player.shurikensInAir[i][2], Game.shurikenWidth, Game.shurikenHeight) || player.shurikensInAir[i][1] >= Game.width - Game.shurikenWidth) {
           killThisShuriken = true;
         }
       }
