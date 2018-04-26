@@ -52,6 +52,18 @@ function drawPlayerStatus () {
     canvasContext.drawImage(blueNinjaStatusBarShuriken[0], Game.width - lengthOfHPBar - (pixelsFromSides - i * (pixelsBetweenShurikens + Game.shurikenWidth)), pixelsFromTop + pixelsFromHPBarToShurikens);
   }
 
+  // Scoreboard.
+  canvasContext.textAlign = "center";
+  canvasContext.fillStyle = Game.standardTextColor;
+
+  canvasContext.font = "35px " + Game.standardTextFont;
+  canvasContext.fillText(Game.rounds, Game.width / 2, 35);
+
+  canvasContext.font = "20px " + Game.standardTextFont;
+  canvasContext.fillText("Red: " + player1.wins + "   -     " + "     -   Blue: " + player2.wins, Game.width / 2, 30);
+
+
+  // Revert alpha.
   canvasContext.globalAlpha = 1;
 }
 
