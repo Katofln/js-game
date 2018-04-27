@@ -1,5 +1,8 @@
 Game.render = function () {
   // Clear canvas.
+  canvasContext.fillStyle="#ffffff";
+  canvasContext.fillRect(0, 0, Game.width, Game.height);
+  // Apply background.
   canvasContext.globalAlpha = Tilemap.backgroundOpacity;
   canvasContext.drawImage(Tilemap.background, 0, 0);
   canvasContext.globalAlpha = 1;

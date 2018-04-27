@@ -16,6 +16,8 @@ brownGrassTile.src = 'assets/tiles/brownGrassTile.png';
 // Backgrounds
 var forrestBackground = new Image();
 forrestBackground.src = 'assets/backgrounds/forrestBackground.png';
+var mountainForestBackground = new Image();
+mountainForestBackground.src = 'assets/backgrounds/mountainForestBackground.png';
 
 // Player 1
 var redNinjaIdle = new Array();
