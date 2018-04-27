@@ -1,14 +1,15 @@
 // Stores current tilemap.
 var Tilemap = null;
-
-// Map one.
-var mapOne = {
-  background:mountainForestBackground,
-  backgroundOpacity:0.65,
-  tileSize:32, // Width and height in pixels.
-  rows:24,
-  columns:32,
-  map: [
+// Stores all maps in array.
+var maps = [
+  {
+    // Map one
+    background:mountainForestBackground,
+    backgroundOpacity:0.65,
+    tileSize:32, // Width and height in pixels.
+    rows:24,
+    columns:32,
+    map: [
 
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -36,7 +37,8 @@ var mapOne = {
 4,4,4,4,4,4,4,4,4,4,4,1,3,3,3,3,3,4,2,2,2,2,1,2,2,2,2,2,2,2,2,2
 
     ]
-};
+  }
+];
 
 // Set standard map.
-Tilemap = mapOne;
+Tilemap = maps[0];
