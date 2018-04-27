@@ -1,6 +1,5 @@
 // Stores current tilemap.
 var Tilemap = null;
-// Stores all maps in array
 
 // Map one.
 var mapOne = {
