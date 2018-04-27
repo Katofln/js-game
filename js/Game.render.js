@@ -1,6 +1,8 @@
 Game.render = function () {
   // Clear canvas.
+  canvasContext.globalAlpha = Tilemap.backgroundOpacity;
   canvasContext.drawImage(Tilemap.background, 0, 0);
+  canvasContext.globalAlpha = 1;
 
   // Draw tilemap.
   var currentRow = 1;

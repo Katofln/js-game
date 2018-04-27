@@ -1,5 +1,6 @@
 var Tilemap = {
   background:forrestBackground,
+  backgroundOpacity:1,
   tileSize:32, // Width and height in pixels.
   rows:24,
   columns:32,
