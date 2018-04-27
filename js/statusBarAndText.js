@@ -62,6 +62,9 @@ function drawPlayerStatus () {
   canvasContext.font = "20px " + Game.standardTextFont;
   canvasContext.fillText("Red: " + player1.wins + "   -     " + "     -   Blue: " + player2.wins, Game.width / 2, 30);
 
+  canvasContext.font = "12px " + Game.standardTextFont;
+  canvasContext.fillText("Map: " + Tilemap.name, Game.width / 2, 50);
+
 
   // Revert alpha.
   canvasContext.globalAlpha = 1;
