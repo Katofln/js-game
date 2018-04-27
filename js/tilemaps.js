@@ -42,3 +42,7 @@ var maps = [
 
 // Set standard map.
 Tilemap = maps[0];
+
+function changeToRandomMap () {
+  Tilemap = maps[Math.floor((Math.random() * maps.length));];
+}
