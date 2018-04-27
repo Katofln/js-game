@@ -1,5 +1,5 @@
 # Third Party Assets
-This page links and credits all game art, music and so on other creaters have made that are used in this game.
+This page links and credits all game art, music and so on that other creators have made, that are used in this game.
 ## Art
 ### Ninja [Animated]
 *By DezrasDragons*
@@ -17,3 +17,7 @@ This page links and credits all game art, music and so on other creaters have ma
 *By Julien*
 
 [Webpage link.](https://opengameart.org/content/large-forest-background)
+### Asian Mountain Forest BG
+*By Crisisworks*
+
+[Webpage link.](https://opengameart.org/content/asian-mountain-forest-bg)
