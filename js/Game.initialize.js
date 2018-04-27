@@ -11,4 +11,6 @@ Game.initialize = function () {
 
   player1.animationDirection = Game.player1StartAnimationDirection;
   player2.animationDirection = Game.player2StartAnimationDirection;
+
+  changeToRandomMap();
 }
