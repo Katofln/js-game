@@ -1,4 +1,9 @@
-var Tilemap = {
+// Stores current tilemap.
+var Tilemap = null;
+// Stores all maps in array
+
+// Map one.
+var mapOne = {
   background:mountainForestBackground,
   backgroundOpacity:0.65,
   tileSize:32, // Width and height in pixels.
@@ -33,3 +38,6 @@ var Tilemap = {
 
     ]
 };
+
+// Set standard map.
+Tilemap = mapOne;
