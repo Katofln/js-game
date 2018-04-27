@@ -238,6 +238,10 @@ function Player (x, y, animationDirection) {
       } else if (this.yVelocity < 0 && isObjectCollidingWithTilemapUp(this.x, this.y, this.width, this.height)) {
         this.yVelocity = 0;
       }
+      // Kill player if 300 px under screen.
+      if (this.y + this.height > Game.height + 300) {
+        this.hp = 0;
+      }
       /*
         End y-axis movement.
       */
