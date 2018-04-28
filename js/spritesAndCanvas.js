@@ -18,6 +18,8 @@ var forrestBackground = new Image();
 forrestBackground.src = 'assets/backgrounds/forrestBackground.png';
 var mountainForestBackground = new Image();
 mountainForestBackground.src = 'assets/backgrounds/mountainForestBackground.png';
+var forestAndMountains = new Image();
+forestAndMountains.src = 'assets/backgrounds/forestAndMountains.png';
 
 // Player 1
 var redNinjaIdle = new Array();
