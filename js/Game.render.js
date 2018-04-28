@@ -40,13 +40,6 @@ Game.render = function () {
     }
   }
 
-  // Draw screen info.
-  if (!Game.running && !Game.winScreen) {
-    drawPlayersNeedToReadyUp();
-  } else if (Game.winScreen) {
-    drawPlayerXWon(Game.lastWinner);
-  }
-
   // Draw player status bar.
   drawPlayerStatus();
 
@@ -120,6 +113,13 @@ Game.render = function () {
     } else {
       canvasContext.drawImage(shurikenMovingRight[player2.shurikensInAir[i][3]], player2.shurikensInAir[i][1], player2.shurikensInAir[i][2]);
     }
+  }
+
+  // Draw screen info.
+  if (!Game.running && !Game.winScreen) {
+    drawPlayersNeedToReadyUp();
+  } else if (Game.winScreen) {
+    drawPlayerXWon(Game.lastWinner);
   }
 
   // Increase the render tick number for time calculation.
