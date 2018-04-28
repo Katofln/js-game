@@ -84,7 +84,12 @@ function drawPlayerXWon (player) { // Takes input: "1" and "2".
   canvasContext.font = "90px " + Game.standardTextFont;
   canvasContext.textAlign = "center";
   canvasContext.fillStyle = winColor;
-  canvasContext.fillText(playerWonColor + " Wins!", Game.width/2, Game.height/2);
+  if (playerWonColor != null) {
+    canvasContext.fillText(playerWonColor + " Wins!", Game.width/2, Game.height/2);
+  // In rare cases a draw can happen.
+  } else {
+    canvasContext.fillText("Draw!", Game.width/2, Game.height/2);
+  }
 }
 
 function drawPlayersNeedToReadyUp () {
