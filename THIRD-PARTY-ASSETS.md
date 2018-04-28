@@ -21,3 +21,7 @@ This page links and credits all game art, music and so on that other creators ha
 *By Crisisworks*
 
 [Webpage link.](https://opengameart.org/content/asian-mountain-forest-bg)
+### Mountain at Dusk Background
+*By ansimuz*
+
+[Webpage link.](https://opengameart.org/content/mountain-at-dusk-background)
