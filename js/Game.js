@@ -21,5 +21,6 @@ var Game = {
     player2StartAnimationDirection:"left",
 
     shurikenWidth:25,
-    shurikenHeight:25
+    shurikenHeight:25,
+    shurikenHitboxToTilemapDecreaser:10 // To make shuriken hitbox smaller, but only to tilemaps.
 };
