@@ -1,5 +1,8 @@
 var settingsPanelCurrentlyDisplayed = false;
 
+// Insert standard values.
+// TODO
+
 function showSettingsPanel (bool) {  // true/false
   if (bool) {
     document.getElementById("settingsPanel").style.display = "block";
