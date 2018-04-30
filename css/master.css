@@ -169,3 +169,7 @@ body {
   border-radius: 10px;
   padding: 20px
 }
+
+#settingsPanel input {
+  width: 75px;
+}
