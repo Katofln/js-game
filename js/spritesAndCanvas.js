@@ -13,13 +13,30 @@ brownTile.src = 'assets/tiles/brownTile.png';
 var brownGrassTile = new Image();
 brownGrassTile.src = 'assets/tiles/brownGrassTile.png';
 
+var desertTile = new Image();
+desertTile.src = 'assets/tiles/desertTile.png';
+var desertGrassTile = new Image();
+desertGrassTile.src = 'assets/tiles/desertGrassTile.png';
+var woodenCreateTile = new Image();
+woodenCreateTile.src = 'assets/tiles/woodenCreateTile.png';
+var brickTile = new Image();
+brickTile.src = 'assets/tiles/brickTile.png';
+var brickV2Tile = new Image();
+brickV2Tile.src = 'assets/tiles/brickV2Tile.png';
+var sandTile = new Image();
+sandTile.src = 'assets/tiles/sandTile.png';
+var sandStoneTile = new Image();
+sandStoneTile.src = 'assets/tiles/sandStoneTile.png';
+
 // Backgrounds
 var forrestBackground = new Image();
 forrestBackground.src = 'assets/backgrounds/forrestBackground.png';
 var mountainForestBackground = new Image();
 mountainForestBackground.src = 'assets/backgrounds/mountainForestBackground.png';
-var forestAndMountains = new Image();
-forestAndMountains.src = 'assets/backgrounds/forestAndMountains.png';
+var mountainForestBackground2 = new Image();
+mountainForestBackground2.src = 'assets/backgrounds/mountainForestBackground2.png';
+var forestBackground2 = new Image();
+forestBackground2.src = 'assets/backgrounds/forestBackground2.png';
 
 // Player 1
 var redNinjaIdle = new Array();

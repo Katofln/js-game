@@ -26,6 +26,27 @@ Game.render = function () {
           break;
         case 4:
           canvasContext.drawImage(brownGrassTile, currentTileX, currentTileY);
+          break;
+        case 5:
+          canvasContext.drawImage(desertTile, currentTileX, currentTileY);
+          break;
+        case 6:
+          canvasContext.drawImage(desertGrassTile, currentTileX, currentTileY);
+          break;
+        case 7:
+          canvasContext.drawImage(woodenCreateTile, currentTileX, currentTileY);
+          break;
+        case 8:
+          canvasContext.drawImage(brickTile, currentTileX, currentTileY);
+          break;
+        case 9:
+          canvasContext.drawImage(brickV2Tile, currentTileX, currentTileY);
+          break;
+        case 10:
+          canvasContext.drawImage(sandTile, currentTileX, currentTileY);
+          break;
+        case 11:
+          canvasContext.drawImage(sandStoneTile, currentTileX, currentTileY);
       }
     }
 
