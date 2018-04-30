@@ -1,8 +1,5 @@
 // Holds current value of what is pressed down.
 var IsKeyDown = {
-  // General.
-  zeroKey:false,
-
   // Player 1.
   aKey:false,
   dKey:false,
@@ -51,8 +48,6 @@ document.addEventListener('keydown', function(event) {
       break;
     case 49:
       IsKeyDown.oneKey = true;
-    case 48:
-      IsKeyDown.zeroKey = true;
   }
 });
 
@@ -88,8 +83,6 @@ document.addEventListener('keyup', function(event) {
       break;
     case 49:
       IsKeyDown.oneKey = false;
-    case 48:
-      IsKeyDown.zeroKey = false;
   }
 });
 
