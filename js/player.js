@@ -29,7 +29,7 @@ function Player (x, y, animationDirection) {
   this.tickTimeBetweenAttackAndBlocks = 30;
   this.tickTimeForDurationOfAttack = 30 / 2;
   // Tick time for action.
-  this.tickTimeForTakingDamageAnimation = 30 / 3;
+  this.tickTimeForTakingDamageAnimation = 30 / 2;
   // Store tick times to next actions.
   this.tickTimeToNextShurikenThrow = 0;
   this.tickTimeToNewShuriken = this.tickTimeBetweenNewShurikens;
