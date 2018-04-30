@@ -13,6 +13,17 @@ brownTile.src = 'assets/tiles/brownTile.png';
 var brownGrassTile = new Image();
 brownGrassTile.src = 'assets/tiles/brownGrassTile.png';
 
+var desertTile = new Image();
+desertTile.src = 'assets/tiles/desertTile.png';
+var desertGrassTile = new Image();
+desertGrassTile.src = 'assets/tiles/desertGrassTile.png';
+var woodenCreateTile = new Image();
+woodenCreateTile.src = 'assets/tiles/woodenCreateTile.png';
+var brickTile = new Image();
+brickTile.src = 'assets/tiles/brickTile.png';
+var brickV2Tile = new Image();
+brickV2Tile.src = 'assets/tiles/brickV2Tile.png';
+
 // Backgrounds
 var forrestBackground = new Image();
 forrestBackground.src = 'assets/backgrounds/forrestBackground.png';
