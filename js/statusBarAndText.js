@@ -106,9 +106,9 @@ function drawPlayersNeedToReadyUp () {
   canvasContext.fillText('Hold shuriken key to accept ready check', Game.width/2, Game.height/2);
 
   // Draw which keys to hold down.
-  canvasContext.font = "20px " + Game.standardTextFont;
+  canvasContext.font = "16px " + Game.standardTextFont;
   canvasContext.fillStyle = Game.standardTextColor;
-  canvasContext.fillText('Keys: 1 + .', Game.width/2, Game.height/2 + 30);
+  canvasContext.fillText('Shuriken is the 1 and the dot key, pause game by pressing the escape key.', Game.width/2, Game.height/2 + 25);
 
   // Draw other things on screen.
   canvasContext.drawImage(JSNinjaLogo, Game.width/2 - 250, 150);
