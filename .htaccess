@@ -1,4 +1,18 @@
-# Disable browser caching
-ExpiresActive On
-ExpiresDefault A1
-Header append Cache-Control must-revalidate
+# Stop caching
+# BEGIN Expire headers
+<ifModule mod_expires.c>
+        ExpiresActive On
+        ExpiresDefault "access"
+        ExpiresByType image/x-icon "access"
+        ExpiresByType image/jpeg "access"
+        ExpiresByType image/png "access"
+        ExpiresByType image/gif "access"
+        ExpiresByType application/x-shockwave-flash "access"
+        ExpiresByType text/css "access"
+        ExpiresByType text/javascript "access"
+        ExpiresByType application/javascript "access"
+        ExpiresByType application/x-javascript "access"
+        ExpiresByType text/html "access"
+        ExpiresByType application/xhtml+xml "access"
+</ifModule>
+# END Expire headers
