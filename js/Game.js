@@ -5,6 +5,7 @@ var Game = {
     height:768,
     running:false,
     winScreen:false,
+    paused:false,
     lastWinner:null,  //Takes "1" and "2" as input.
     rounds:0,
     tickTimeForWinScreen:30 * 3,

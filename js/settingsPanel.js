@@ -26,10 +26,12 @@ document.getElementById("player2TimeBetweenNewShurikens").placeholder = player2.
 
 function showSettingsPanel (bool) {  // true/false
   if (bool) {
+    Game.paused = true;
     document.getElementById("settingsPanel").style.display = "block";
     settingsPanelCurrentlyDisplayed = true;
   } else {
     document.getElementById("settingsPanel").style.display = "none";
+    Game.paused = false;
     settingsPanelCurrentlyDisplayed = false;
   }
 }
