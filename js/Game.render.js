@@ -143,6 +143,11 @@ Game.render = function () {
     drawPlayerXWon(Game.lastWinner);
   }
 
+  // Draw game version on pause screen.
+  if (Game.paused) {
+    drawGameVersion();
+  }
+
   // Increase the render tick number for time calculation.
   Game.currentRenderTick++;
 }

@@ -92,6 +92,13 @@ function drawPlayerXWon (player) { // Takes input: "1" and "2".
   }
 }
 
+function drawGameVersion () {
+  canvasContext.textAlign = "left";
+  canvasContext.fillStyle = "#000000";
+  canvasContext.font = "15px " + Game.standardTextFont;
+  canvasContext.fillText(gameVersion, 2, Game.height - 2);
+}
+
 function drawPlayersNeedToReadyUp () {
   canvasContext.font = "34px " + Game.standardTextFont;
   canvasContext.textAlign = "center";
@@ -122,9 +129,8 @@ function drawPlayersNeedToReadyUp () {
   canvasContext.fillStyle = "#373737";
   canvasContext.font = "12px " + Game.standardTextFont;
   canvasContext.fillText('frederikstroem.com', 100, Game.height - 120);
-  canvasContext.fillStyle = "#000000";
-  canvasContext.font = "15px " + Game.standardTextFont;
-  canvasContext.fillText(gameVersion, 2, Game.height - 2);
+
+  drawGameVersion();
 
   // Third party credits.
   canvasContext.drawImage(thirdPartyCredits, Game.width - 400, Game.height - 300);
