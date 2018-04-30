@@ -149,7 +149,7 @@ var maps = [
   {
     name:"ayy lmao [FS]",
     background:mountainForestBackground2,
-    backgroundOpacity:0.8,
+    backgroundOpacity:0.9,
     tileSize:32,
     rows:24,
     columns:32,
