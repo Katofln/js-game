@@ -3,7 +3,7 @@ var Tilemap = null;
 // Stores all maps in array.
 var maps = [
   {
-    name:"OG",
+    name:"OG [FS]",
     background:forrestBackground,
     backgroundOpacity:1,
     tileSize:32, // Width and height in pixels.
@@ -39,7 +39,7 @@ var maps = [
     ]
   },
   {
-    name:"Stairs",
+    name:"Stairs [FS]",
     background:mountainForestBackground,
     backgroundOpacity:0.65,
     tileSize:32,
@@ -75,7 +75,7 @@ var maps = [
     ]
   },
   {
-    name:"Drop",
+    name:"Drop [FS]",
     background:mountainForestBackground,
     backgroundOpacity:0.65,
     tileSize:32,
