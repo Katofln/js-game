@@ -1,6 +1,6 @@
 # Contributors
 ## Code
-* Frederik Holm Strøm (Katofln)
+* Frederik Holm Strøm
 ## Maps
-* Frederik Holm Strøm (Katofln)
+* Frederik Holm Strøm
 * Martin E. Rasmussen
