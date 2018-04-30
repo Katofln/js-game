@@ -8,6 +8,7 @@ Each player can win an unlimeted amount of times. The score counter is on the to
 ### Ready up
 Every time a new round has to be played. Both players have to hold down the attack/block button at the same time, and then the round will start after a countdown of 3 seconds. When a player hold down the attack/block button, an indicator and a sound will display on the screen at that players side.
 ## Controls
+* Open settings pane: 0
 ### Player 1 (The Red Ninja)
 * Left: A
 * Right: D
