@@ -113,7 +113,7 @@ var maps = [
   {
     name:"Rumble In The Jungle [MR]",
     background:forestBackground2,
-    backgroundOpacity:0.65,
+    backgroundOpacity:0.8,
     tileSize:32,
     rows:24,
     columns:32,
