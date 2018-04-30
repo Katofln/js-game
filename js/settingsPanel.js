@@ -35,7 +35,7 @@ function showSettingsPanel (bool) {  // true/false
 }
 
 document.addEventListener('keydown', function(event) {
-  if (event.keyCode == 48) {
+  if (event.keyCode == 27) {
     if (settingsPanelCurrentlyDisplayed) {
       showSettingsPanel(false);
     } else {
@@ -45,7 +45,16 @@ document.addEventListener('keydown', function(event) {
 });
 
 function saveSettingsPanel () {
-  // TODO
+  if (document.getElementById("player1HP").value) {
+    player1.hp = document.getElementById("player1HP").value;
+  }
 
   showSettingsPanel(false);
+}
+
+function clearSettingsPanel() {
+  var elements = document.getElementsByTagName("input");
+  for (var ii=0; ii < elements.length; ii++) {
+    elements[ii].value = "";
+  }
 }
