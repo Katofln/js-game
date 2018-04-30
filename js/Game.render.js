@@ -41,6 +41,12 @@ Game.render = function () {
           break;
         case 9:
           canvasContext.drawImage(brickV2Tile, currentTileX, currentTileY);
+          break;
+        case 10:
+          canvasContext.drawImage(sandTile, currentTileX, currentTileY);
+          break;
+        case 11:
+          canvasContext.drawImage(sandStoneTile, currentTileX, currentTileY);
       }
     }
 

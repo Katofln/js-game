@@ -23,6 +23,10 @@ var brickTile = new Image();
 brickTile.src = 'assets/tiles/brickTile.png';
 var brickV2Tile = new Image();
 brickV2Tile.src = 'assets/tiles/brickV2Tile.png';
+var sandTile = new Image();
+sandTile.src = 'assets/tiles/sandTile.png';
+var sandStoneTile = new Image();
+sandStoneTile.src = 'assets/tiles/sandStoneTile.png';
 
 // Backgrounds
 var forrestBackground = new Image();
