@@ -45,8 +45,71 @@ document.addEventListener('keydown', function(event) {
 });
 
 function saveSettingsPanel () {
+  if (document.getElementById("map").value) {
+    Tilemap = maps[document.getElementById("map").value];
+  }
+  // Player 1
   if (document.getElementById("player1HP").value) {
     player1.hp = document.getElementById("player1HP").value;
+  }
+  if (document.getElementById("player1Gravity").value) {
+    player1.gravity = document.getElementById("player1Gravity").value;
+  }
+  if (document.getElementById("player1MoveVelocity").value) {
+    player1.moveVelocity = document.getElementById("player1MoveVelocity").value;
+  }
+  if (document.getElementById("player1JumpVelocity").value) {
+    player1.jumpVelocity = document.getElementById("player1JumpVelocity").value;
+  }
+  if (document.getElementById("player1MaxJumpTimes").value) {
+    player1.maxJumpTimes = document.getElementById("player1MaxJumpTimes").value;
+  }
+  if (document.getElementById("player1ShurikenDamage").value) {
+    player1.shurikenDamage = document.getElementById("player1ShurikenDamage").value;
+  }
+  if (document.getElementById("player1ShurikenVelocity").value) {
+    player1.shurikenVelocity = document.getElementById("player1ShurikenVelocity").value;
+  }
+  if (document.getElementById("player1MaxShurikens").value) {
+    player1.maxShurikens = document.getElementById("player1MaxShurikens").value;
+  }
+  if (document.getElementById("player1TimeBetweenShurikenThrows").value) {
+    player1.tickTimeBetweenShurikenThrows = document.getElementById("player1TimeBetweenShurikenThrows").value;
+  }
+  if (document.getElementById("player1TimeBetweenNewShurikens").value) {
+    player1.tickTimeBetweenNewShurikens = document.getElementById("player1TimeBetweenNewShurikens").value;
+  }
+
+  // Player 2
+  if (document.getElementById("player2HP").value) {
+    player2.hp = document.getElementById("player2HP").value;
+  }
+  if (document.getElementById("player2Gravity").value) {
+    player2.gravity = document.getElementById("player2Gravity").value;
+  }
+  if (document.getElementById("player2MoveVelocity").value) {
+    player2.moveVelocity = document.getElementById("player2MoveVelocity").value;
+  }
+  if (document.getElementById("player2JumpVelocity").value) {
+    player2.jumpVelocity = document.getElementById("player2JumpVelocity").value;
+  }
+  if (document.getElementById("player2MaxJumpTimes").value) {
+    player2.maxJumpTimes = document.getElementById("player2MaxJumpTimes").value;
+  }
+  if (document.getElementById("player2ShurikenDamage").value) {
+    player2.shurikenDamage = document.getElementById("player2ShurikenDamage").value;
+  }
+  if (document.getElementById("player2ShurikenVelocity").value) {
+    player2.shurikenVelocity = document.getElementById("player2ShurikenVelocity").value;
+  }
+  if (document.getElementById("player2MaxShurikens").value) {
+    player2.maxShurikens = document.getElementById("player2MaxShurikens").value;
+  }
+  if (document.getElementById("player2TimeBetweenShurikenThrows").value) {
+    player2.tickTimeBetweenShurikenThrows = document.getElementById("player2TimeBetweenShurikenThrows").value;
+  }
+  if (document.getElementById("player2TimeBetweenNewShurikens").value) {
+    player2.tickTimeBetweenNewShurikens = document.getElementById("player2TimeBetweenNewShurikens").value;
   }
 
   showSettingsPanel(false);
