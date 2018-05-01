@@ -239,7 +239,7 @@ function Player (x, y, animationDirection) {
         this.yVelocity = 0;
       }
       // Kill player if 300 px under screen.
-      if (this.y + this.height > Game.height + 300) {
+      if (this.y + this.height > Game.height + 1000) {
         this.hp = 0;
       }
       /*
