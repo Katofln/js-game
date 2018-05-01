@@ -3,7 +3,7 @@ var Tilemap = null;
 // Stores all maps in array.
 var maps = [
   {
-    name:"OG [FS]",
+    name:"OG",
     background:forrestBackground,
     backgroundOpacity:1,
     tileSize:32, // Width and height in pixels.
@@ -39,7 +39,7 @@ var maps = [
     ]
   },
   {
-    name:"Stairs [FS]",
+    name:"Stairs",
     background:mountainForestBackground,
     backgroundOpacity:0.65,
     tileSize:32,
@@ -75,7 +75,7 @@ var maps = [
     ]
   },
   {
-    name:"Drop [FS]",
+    name:"Drop",
     background:mountainForestBackground,
     backgroundOpacity:0.65,
     tileSize:32,
@@ -111,7 +111,7 @@ var maps = [
     ]
   },
   {
-    name:"Rumble In The Jungle [MR]",
+    name:"Rumble In The Jungle",
     background:forestBackground2,
     backgroundOpacity:0.8,
     tileSize:32,
