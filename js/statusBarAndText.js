@@ -54,13 +54,10 @@ function drawPlayerStatus () {
 
   // Scoreboard.
   canvasContext.textAlign = "center";
-  canvasContext.fillStyle = Game.standardTextColor;
-
-  canvasContext.font = "35px " + Game.standardTextFont;
-  canvasContext.fillText(Game.rounds, Game.width / 2, 35);
+  canvasContext.fillStyle = "#000000";
 
   canvasContext.font = "20px " + Game.standardTextFont;
-  canvasContext.fillText("Red: " + player1.wins + "   -     " + "     -   Blue: " + player2.wins, Game.width / 2, 30);
+  canvasContext.fillText("Red: " + player1.wins + "   -   " + Game.rounds + "   -   Blue: " + player2.wins, Game.width / 2, 30);
 
   canvasContext.font = "12px " + Game.standardTextFont;
   canvasContext.fillText("Map: " + Tilemap.name, Game.width / 2, 50);
