@@ -37,11 +37,18 @@ function showSettingsPanel (bool) {  // true/false
 }
 
 document.addEventListener('keydown', function(event) {
+  // Escape key.
   if (event.keyCode == 27) {
     if (settingsPanelCurrentlyDisplayed) {
       showSettingsPanel(false);
     } else {
       showSettingsPanel(true);
+    }
+  }
+  // Enter key.
+  if (event.keyCode == 13) {
+    if (settingsPanelCurrentlyDisplayed) {
+      saveSettingsPanel();
     }
   }
 });
