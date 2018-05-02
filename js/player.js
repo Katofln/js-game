@@ -102,6 +102,7 @@ function Player (x, y, animationDirection) {
   this.takeDamage = function (dmg) {
     this.hp -= dmg;
     this.tickTimeToTakingDamageAnimationEnds = Game.currentRenderTick + this.tickTimeForTakingDamageAnimation;
+    damageTaken.play();
   }
 
   // Check if player is dead.
@@ -199,6 +200,12 @@ function Player (x, y, animationDirection) {
           this.yVelocity = 0 - this.jumpVelocity;
           this.timesJumped++;
           this.jumpKeyHaveBeenReleasedInAir = false;
+
+          if (this.timesJumped == 1) {
+            jump1.play();
+          } else {
+            jump2.play();
+          }
         }
       }
 
@@ -301,6 +308,7 @@ function Player (x, y, animationDirection) {
           // Decrease shurikens.
           this.shurikens--;
           this.tickTimeToNextShurikenThrow = Game.currentRenderTick + this.tickTimeBetweenShurikenThrows;
+          shurikenThrow.play();
         }
       }
       // Generate new shurikens.
