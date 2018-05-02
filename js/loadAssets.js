@@ -2,7 +2,7 @@
 var canvas = document.getElementById("gameCanvas");
 var canvasContext = canvas.getContext("2d");
 
-// Add images.
+// Load sprites.
 //Tiles
 var groundTile = new Image();
 groundTile.src = 'assets/tiles/groundTile.png';
@@ -118,3 +118,9 @@ JSNinjaLogo = new Image();
 JSNinjaLogo.src = 'assets/JSNinjaLogo.png';
 thirdPartyCredits = new Image();
 thirdPartyCredits.src = 'assets/thirdPartyCredits.png';
+
+// Load audio.
+var damageTaken = new Audio('assets/audio/damageTaken.wav');
+var jump1 = new Audio('assets/audio/jump1.wav');
+var jump2 = new Audio('assets/audio/jump2.wav');
+var shurikenThrow = new Audio('assets/audio/shurikenThrow.wav');
