@@ -156,9 +156,9 @@ body {
 }
 
 #settingsPanel {
-  width: 296px;
+  width: 396px;
   height: 596px;
-  margin-left: -150px;
+  margin-left: -200px;
   margin-top: -300px;
   position: absolute;
   top: 50%;
