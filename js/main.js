@@ -163,3 +163,29 @@ function isObjectsColliding (obj1x, obj1y, obj1width, obj1height, obj2x, obj2y, 
 /*
   End collision detection.
 */
+
+/*
+  Audio toggles.
+*/
+
+function toggleSound () {
+  if (Game.soundOn) {
+    damageTaken.volume = 0;
+    jump1.volume = 0;
+    jump2.volume = 0;
+    shurikenThrow.volume = 0;
+  } else {
+    damageTaken.volume = 1;
+    jump1.volume = 1;
+    jump2.volume = 1;
+    shurikenThrow.volume = 1;
+  }
+}
+
+function toggleMusic () {
+  // TODO
+}
+
+/*
+  End audio toggles.
+*/
