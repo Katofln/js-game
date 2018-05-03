@@ -124,3 +124,11 @@ var damageTaken = new Audio('assets/audio/damageTaken.wav');
 var jump1 = new Audio('assets/audio/jump1.wav');
 var jump2 = new Audio('assets/audio/jump2.wav');
 var shurikenThrow = new Audio('assets/audio/shurikenThrow.wav');
+
+function standardSoundVolume () {
+  damageTaken.volume = 0.50;
+  jump1.volume = 1;
+  jump2.volume = 1;
+  shurikenThrow.volume = 0.50;
+}
+standardSoundVolume();

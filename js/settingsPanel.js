@@ -143,10 +143,7 @@ function toggleSound () {
     shurikenThrow.volume = 0;
     Game.soundOn = false;
   } else {
-    damageTaken.volume = 1;
-    jump1.volume = 1;
-    jump2.volume = 1;
-    shurikenThrow.volume = 1;
+    standardSoundVolume();
     Game.soundOn = true;
   }
 }
