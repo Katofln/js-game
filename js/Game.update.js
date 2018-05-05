@@ -34,9 +34,15 @@ Game.update = function () {
 
     // Execute if game is running.
     if (Game.running) {
+      if (soundtrack.paused) {
+        soundtrack.load();
+      }
+      soundtrack.play();
       player1.update();
       player2.update();
       updateAllShurikens();
+    } else {
+      soundtrack.pause();
     }
   }
 }

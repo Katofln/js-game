@@ -132,3 +132,8 @@ function standardSoundVolume () {
   shurikenThrow.volume = 0.50;
 }
 standardSoundVolume();
+
+// Load music.
+var soundtrack = new Audio('assets/audio/soundtrack.mp3');
+soundtrack.volume = 0.75;
+soundtrack.loop = true;
