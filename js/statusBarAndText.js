@@ -130,5 +130,5 @@ function drawPlayersNeedToReadyUp () {
   drawGameVersion();
 
   // Third party credits.
-  canvasContext.drawImage(thirdPartyCredits, Game.width - 400, Game.height - 300);
+  canvasContext.drawImage(thirdPartyCredits, Game.width - 400, Game.height - 310);
 }
