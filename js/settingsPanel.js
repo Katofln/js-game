@@ -149,7 +149,7 @@ function toggleSound () {
 }
 
 function toggleMusic () {
-  // TODO
+  soundtrack.volume = 0;
 }
 
 /*
