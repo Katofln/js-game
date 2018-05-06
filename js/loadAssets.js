@@ -116,8 +116,6 @@ for (var i = 0; i < 5; i++) {
 // For ready check screen.
 JSNinjaLogo = new Image();
 JSNinjaLogo.src = 'assets/JSNinjaLogo.png';
-thirdPartyCredits = new Image();
-thirdPartyCredits.src = 'assets/thirdPartyCredits.png';
 
 // Load audio.
 var damageTaken = new Audio('assets/audio/damageTaken.wav');

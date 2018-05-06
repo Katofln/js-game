@@ -130,5 +130,8 @@ function drawPlayersNeedToReadyUp () {
   drawGameVersion();
 
   // Third party credits.
-  canvasContext.drawImage(thirdPartyCredits, Game.width - 400, Game.height - 310);
+  canvasContext.textAlign = "right";
+  canvasContext.fillStyle = "#000000";
+  canvasContext.font = "14px " + Game.standardTextFont;
+  canvasContext.fillText('Third party list on github.com/frederikstroem/js-ninja', Game.width - 2, Game.height - 2);
 }
