@@ -149,7 +149,13 @@ function toggleSound () {
 }
 
 function toggleMusic () {
-  soundtrack.volume = 0;
+  if (Game.musicOn) {
+    soundtrack.volume = 0;
+    Game.musicOn = false;
+  } else {
+    standardMusicVolume();
+    Game.musicOn = true;
+  }
 }
 
 /*

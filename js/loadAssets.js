@@ -133,5 +133,8 @@ standardSoundVolume();
 
 // Load music.
 var soundtrack = new Audio('assets/audio/soundtrack.mp3');
-soundtrack.volume = 0.75;
 soundtrack.loop = true;
+function standardMusicVolume () {
+  soundtrack.volume = 0.75;
+}
+standardMusicVolume();
