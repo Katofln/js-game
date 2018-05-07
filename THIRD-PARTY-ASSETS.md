@@ -29,6 +29,12 @@ This page links and credits all game art, music and so on that other creators ha
 *By ansimuz*
 
 [Webpage link.](https://opengameart.org/content/forest-background)
+### Tiles
+*By Martin E. Rasmussen*
+
+[Webpage link.](https://martin-e-rasmussen.weebly.com/)
+### Sound Effects
+*By Simon T. Strate*
 ### Shingle Tringle [8-bit Run 'n Pun ]
 *By Ozzed*
 
