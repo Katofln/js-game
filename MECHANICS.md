@@ -14,10 +14,10 @@ Every time a new round has to be played. Both players have to hold down the atta
 * Right: D
 * Jump: W
 * Attack/Block: C
-* Shuriken: 1
+* Shuriken throw: 1
 ### Player 2 (The Blue Ninja)
 * Left: [Left Arrow Key]
 * Right: [Right Arrow Key]
 * Jump: [Up Arrow Key]
 * Attack/Block: , (Comma Key)
-* Shuriken: . (Dot Key)
+* Shuriken throw: . (Dot Key)
